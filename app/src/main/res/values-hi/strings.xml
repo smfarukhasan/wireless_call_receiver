@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">बीटी रिसीव कॉल</string>
+
+    <!-- Language Selection Screen -->
+    <string name="title_select_language">भाषा चुनें</string>
+    <string name="subtitle_select_language">स्क्रीन रीडर और ऐप इंटरफ़ेस के लिए अपनी पसंदीदा भाषा चुनें।</string>
+    <string name="btn_continue">आगे बढ़ें</string>
+
+    <!-- Onboarding / Setup Screen -->
+    <string name="title_onboarding">ऐप सेटअप और अनुमतियां</string>
+    <string name="subtitle_onboarding">ब्लूटूथ बटन से कॉल प्राप्त करने के लिए कृपया निम्नलिखित 3 चरण पूरे करें।</string>
+    
+    <string name="perm_bt_title">1. ब्लूटूथ अनुमति</string>
+    <string name="perm_bt_desc">यह पता लगाने के लिए आवश्यक है कि आपका ब्लूटूथ हेडफ़ोन कब कनेक्ट है।</string>
+    <string name="perm_bt_grant_btn">ब्लूटूथ अनुमति दें</string>
+
+    <string name="perm_acc_title">2. एक्सेसिबिलिटी सर्विस</string>
+    <string name="perm_acc_desc">व्हाट्सएप, मैसेंजर या फ़ोन पर कॉल आने पर हेडसेट बटन दबाकर कॉल उठाने की अनुमति देता है।</string>
+    <string name="perm_acc_grant_btn">एक्सेसिबिलिटी सेटिंग्स खोलें</string>
+
+    <string name="perm_batt_title">3. बैटरी ऑप्टिमाइज़ेशन बंद करें</string>
+    <string name="perm_batt_desc">ब्लूटूथ कनेक्ट रहने के दौरान एंड्रॉइड को बैकग्राउंड सर्विस बंद करने से रोकता है।</string>
+    <string name="perm_batt_grant_btn">बैटरी ऑप्टिमाइज़ेशन हटाएं</string>
+
+    <string name="btn_finish_setup">सेटअप पूरा करें</string>
+    <string name="status_granted">अनुमति दी गई</string>
+    <string name="status_not_granted">अनुमति नहीं मिली - कार्रवाई आवश्यक</string>
+    <string name="status_enabled">सक्षम</string>
+    <string name="status_disabled">अक्षम - कार्रवाई आवश्यक</string>
+
+    <!-- Main Screen -->
+    <string name="main_master_switch_title">मास्टर सर्विस स्विच</string>
+    <string name="main_master_switch_on">मास्टर स्विच ऑन: ब्लूटूथ डिवाइस के माध्यम से कॉल प्राप्त करने के लिए ऐप सक्रिय है।</string>
+    <string name="main_master_switch_off">मास्टर स्विच ऑफ: बैटरी बचाने के लिए बैकग्राउंड गतिविधियां पूरी तरह बंद हैं।</string>
+    <string name="main_bt_status_title">ब्लूटूथ कनेक्शन की स्थिति</string>
+    <string name="main_bt_connected">ब्लूटूथ डिवाइस कनेक्टेड है</string>
+    <string name="main_bt_disconnected">कोई ब्लूटूथ डिवाइस कनेक्टेड नहीं है</string>
+    <string name="main_acc_status_title">एक्सेसिबिलिटी सर्विस स्थिति</string>
+    <string name="main_batt_status_title">बैटरी ऑप्टिमाइज़ेशन स्थिति</string>
+    <string name="btn_change_language">भाषा बदलें</string>
+    <string name="btn_rerun_setup">सेटअप विज़ार्ड फिर से चलाएं</string>
+
+    <!-- Accessibility Service & Notifications -->
+    <string name="accessibility_service_label">बीटी रिसीव कॉल सर्विस</string>
+    <string name="accessibility_service_description">व्हाट्सएप, मैसेंजर और फ़ोन की इनकमिंग कॉल पर नज़र रखता है। ब्लूटूथ बटन दबाने पर कॉल उठाता है। 100% ऑफ़लाइन और सुरक्षित।</string>
+    <string name="notification_channel_name">बीटी रिसीव कॉल स्थिति</string>
+    <string name="notification_title">बीटी कॉल रिसीवर सक्रिय</string>
+    <string name="notification_desc">ब्लूटूथ बटन से इनकमिंग कॉल उठाने के लिए तैयार।</string>
+    <string name="call_answered_announcement">ब्लूटूथ बटन से कॉल उठाई गई।</string>
+</resources>

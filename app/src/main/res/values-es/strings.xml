@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BT Recepción de Llamadas</string>
+
+    <!-- Language Selection Screen -->
+    <string name="title_select_language">Seleccionar Idioma</string>
+    <string name="subtitle_select_language">Elija su idioma preferido para el lector de pantalla y la interfaz.</string>
+    <string name="btn_continue">Continuar</string>
+
+    <!-- Onboarding / Setup Screen -->
+    <string name="title_onboarding">Configuración y Permisos</string>
+    <string name="subtitle_onboarding">Complete los siguientes 3 pasos para recibir llamadas entrantes con el botón Bluetooth.</string>
+    
+    <string name="perm_bt_title">1. Permiso de Bluetooth</string>
+    <string name="perm_bt_desc">Necesario para detectar cuando sus auriculares Bluetooth están conectados.</string>
+    <string name="perm_bt_grant_btn">Conceder permiso de Bluetooth</string>
+
+    <string name="perm_acc_title">2. Servicio de Accesibilidad</string>
+    <string name="perm_acc_desc">Permite detectar llamadas entrantes (WhatsApp, Messenger, Teléfono) y contestar al presionar el botón del auricular.</string>
+    <string name="perm_acc_grant_btn">Abrir ajustes de accesibilidad</string>
+
+    <string name="perm_batt_title">3. Desactivar Optimización de Batería</string>
+    <string name="perm_batt_desc">Evita que Android detenga el servicio en segundo plano cuando el dispositivo Bluetooth está activo.</string>
+    <string name="perm_batt_grant_btn">Desactivar optimización de batería</string>
+
+    <string name="btn_finish_setup">Finalizar configuración y comenzar</string>
+    <string name="status_granted">Concedido</string>
+    <string name="status_not_granted">No concedido - Acción requerida</string>
+    <string name="status_enabled">Habilitado</string>
+    <string name="status_disabled">Deshabilitado - Acción requerida</string>
+
+    <!-- Main Screen -->
+    <string name="main_master_switch_title">Interruptor Principal</string>
+    <string name="main_master_switch_on">Interruptor ENCENDIDO: La aplicación está monitoreando llamadas entrantes vía Bluetooth.</string>
+    <string name="main_master_switch_off">Interruptor APAGADO: Actividades en segundo plano detenidas para ahorrar batería.</string>
+    <string name="main_bt_status_title">Conexión Bluetooth</string>
+    <string name="main_bt_connected">Dispositivo Bluetooth conectado</string>
+    <string name="main_bt_disconnected">Ningún dispositivo Bluetooth conectado</string>
+    <string name="main_acc_status_title">Servicio de Accesibilidad</string>
+    <string name="main_batt_status_title">Exención de Optimización de Batería</string>
+    <string name="btn_change_language">Cambiar Idioma</string>
+    <string name="btn_rerun_setup">Reejecutar Asistente de Configuración</string>
+
+    <!-- Accessibility Service & Notifications -->
+    <string name="accessibility_service_label">Servicio BT Recepción de Llamadas</string>
+    <string name="accessibility_service_description">Monitorea llamadas entrantes en llamadas estándar, WhatsApp, Messenger y Telegram. Simula contestar al presionar el botón del auricular Bluetooth. 100% fuera de línea.</string>
+    <string name="notification_channel_name">Estado de Recepción BT</string>
+    <string name="notification_title">Receptor de Llamadas BT Activo</string>
+    <string name="notification_desc">Listo para contestar llamadas entrantes con el botón Bluetooth.</string>
+    <string name="call_answered_announcement">Llamada contestada mediante botón Bluetooth.</string>
+</resources>

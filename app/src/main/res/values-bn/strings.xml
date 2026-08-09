@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">বিটি রিসিভ কল</string>
+
+    <!-- Language Selection Screen -->
+    <string name="title_select_language">ভাষা নির্বাচন করুন</string>
+    <string name="subtitle_select_language">স্ক্রিন রিডার এবং অ্যাপের জন্য আপনার পছন্দের ভাষা নির্বাচন করুন।</string>
+    <string name="btn_continue">পরবর্তী ধাপ</string>
+
+    <!-- Onboarding / Setup Screen -->
+    <string name="title_onboarding">অ্যাপ সেটআপ ও পারমিশন</string>
+    <string name="subtitle_onboarding">ব্লুটুথ বোতাম দিয়ে কল রিসিভ করতে নিচের ৩টি ধাপ সম্পন্ন করুন।</string>
+    
+    <string name="perm_bt_title">১. ব্লুটুথ পারমিশন</string>
+    <string name="perm_bt_desc">ব্লুটুথ হেডফোন বা নেকব্যান্ড সংযুক্ত আছে কিনা তা সনাক্ত করতে প্রয়োজন।</string>
+    <string name="perm_bt_grant_btn">ব্লুটুথ পারমিশন দিন</string>
+
+    <string name="perm_acc_title">২. অ্যাক্সেসিবিলিটি সার্ভিস</string>
+    <string name="perm_acc_desc">হোয়াটসঅ্যাপ, মেসেঞ্জার বা ফোনের কল আসার সময় হেডফোনের বোতাম চাপলে কল রিসিভ করার অনুমতি দেয়।</string>
+    <string name="perm_acc_grant_btn">অ্যাক্সেসিবিলিটি সেটিংস খুলুন</string>
+
+    <string name="perm_batt_title">৩. ব্যাটারি অপটিমাইজেশন বন্ধ করুন</string>
+    <string name="perm_batt_desc">ব্লুটুথ কানেক্ট থাকা অবস্থায় অ্যাপটি যেন ব্যাকগ্রাউন্ডে বন্ধ না হয়ে যায় তা নিশ্চিত করে।</string>
+    <string name="perm_batt_grant_btn">ব্যাটারি অপটিমাইজেশন রিমুভ করুন</string>
+
+    <string name="btn_finish_setup">সেটআপ সম্পন্ন করুন</string>
+    <string name="status_granted">অনুমোদিত</string>
+    <string name="status_not_granted">অনুমোদিত নয় - পদক্ষেপ প্রয়োজন</string>
+    <string name="status_enabled">সক্রিয়</string>
+    <string name="status_disabled">নিষ্ক্রিয় - পদক্ষেপ প্রয়োজন</string>
+
+    <!-- Main Screen -->
+    <string name="main_master_switch_title">মাস্টার সার্ভিস সুইচ</string>
+    <string name="main_master_switch_on">মাস্টার সুইচ অন: ব্লুটুথ বোতামের মাধ্যমে কল রিসিভ করার জন্য অ্যাপ সক্রিয় রয়েছে।</string>
+    <string name="main_master_switch_off">মাস্টার সুইচ অফ: ব্যাটারি বাঁচাতে ব্যাকগ্রাউন্ড কার্যক্রম সম্পূর্ণ বন্ধ রাখা হয়েছে।</string>
+    <string name="main_bt_status_title">ব্লুটুথ সংযোগ অবস্থা</string>
+    <string name="main_bt_connected">ব্লুটুথ ডিভাইস সংযুক্ত রয়েছে</string>
+    <string name="main_bt_disconnected">কোন ব্লুটুথ ডিভাইস সংযুক্ত নেই</string>
+    <string name="main_acc_status_title">অ্যাক্সেসিবিলিটি সার্ভিস অবস্থা</string>
+    <string name="main_batt_status_title">ব্যাটারি অপটিমাইজেশন অবস্থা</string>
+    <string name="btn_change_language">ভাষা পরিবর্তন করুন</string>
+    <string name="btn_rerun_setup">পুনরায় সেটআপ উইজার্ড চালান</string>
+    <string name="btn_privacy_terms">প্রাইভেসি পলিসি ও শর্তাবলী</string>
+    <string name="title_privacy_terms">প্রাইভেসি পলিসি এবং সার্ভিস শর্তাবলী</string>
+
+    <!-- Accessibility Service & Notifications -->
+    <string name="accessibility_service_label">বিটি রিসিভ কল সার্ভিস</string>
+    <string name="accessibility_service_description">ব্লুটুথ হেডফোন বোতাম চাপলে হোয়াটসঅ্যাপ, মেসেঞ্জার এবং ফোনের ইনকামিং কল রিসিভ করতে সাহায্য করে। সম্পূর্ণ অফলাইন ও নিরাপদ।</string>
+    <string name="notification_channel_name">বিটি রিসিভ কল স্ট্যাটাস</string>
+    <string name="notification_title">বিটি কল রিসিভার সক্রিয়</string>
+    <string name="notification_desc">ব্লুটুথ বোতাম দিয়ে কল রিসিভ করার জন্য প্রস্তুত।</string>
+    <string name="call_answered_announcement">ব্লুটুথ বোতামের মাধ্যমে কল ধরুন।</string>
+</resources>

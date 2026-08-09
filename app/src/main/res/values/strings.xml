@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BT Receive Call</string>
+
+    <!-- Language Selection Screen -->
+    <string name="title_select_language">Select Language</string>
+    <string name="subtitle_select_language">Choose your preferred language for screen reader announcements and interface text.</string>
+    <string name="btn_continue">Continue</string>
+
+    <!-- Onboarding / Setup Screen -->
+    <string name="title_onboarding">App Setup &amp; Permissions</string>
+    <string name="subtitle_onboarding">Please complete the following 3 steps so the app can receive incoming calls with your Bluetooth button.</string>
+    
+    <string name="perm_bt_title">1. Bluetooth Permission</string>
+    <string name="perm_bt_desc">Needed to detect when your Bluetooth headphones or neckband are connected.</string>
+    <string name="perm_bt_grant_btn">Grant Bluetooth Permission</string>
+
+    <string name="perm_acc_title">2. Accessibility Service</string>
+    <string name="perm_acc_desc">Allows the app to detect incoming calls on WhatsApp, Messenger, or Phone and trigger the answer button when you click your headset key.</string>
+    <string name="perm_acc_grant_btn">Open Accessibility Settings</string>
+
+    <string name="perm_batt_title">3. Disable Battery Optimization</string>
+    <string name="perm_batt_desc">Prevents Android from killing the call monitoring service when your Bluetooth device is active.</string>
+    <string name="perm_batt_grant_btn">Disable Battery Optimization</string>
+
+    <string name="btn_finish_setup">Finish Setup and Go to Main App</string>
+    <string name="status_granted">Granted</string>
+    <string name="status_not_granted">Not Granted - Action Required</string>
+    <string name="status_enabled">Enabled</string>
+    <string name="status_disabled">Disabled - Action Required</string>
+
+    <!-- Main Screen -->
+    <string name="main_master_switch_title">Master Service Switch</string>
+    <string name="main_master_switch_on">Master Switch ON: App is monitoring for incoming calls via Bluetooth device.</string>
+    <string name="main_master_switch_off">Master Switch OFF: App background activities are completely stopped to save battery.</string>
+    <string name="main_bt_status_title">Bluetooth Connection</string>
+    <string name="main_bt_connected">Bluetooth Device Connected</string>
+    <string name="main_bt_disconnected">No Bluetooth Device Connected</string>
+    <string name="main_acc_status_title">Accessibility Service</string>
+    <string name="main_batt_status_title">Battery Optimization Exemption</string>
+    <string name="btn_change_language">Change Language</string>
+    <string name="btn_rerun_setup">Re-run Setup Wizard</string>
+    <string name="btn_privacy_terms">Privacy Policy &amp; Terms</string>
+    <string name="title_privacy_terms">Privacy Policy &amp; Terms of Service</string>
+
+    <!-- Accessibility Service & Notifications -->
+    <string name="accessibility_service_label">BT Receive Call Service</string>
+    <string name="accessibility_service_description">Monitors incoming call screens for standard dialers, WhatsApp, Messenger, and Telegram. Simulates answer action when Bluetooth headset media button is pressed. Safe and 100% offline.</string>
+    <string name="notification_channel_name">BT Receive Call Status</string>
+    <string name="notification_title">BT Call Receiver Active</string>
+    <string name="notification_desc">Ready to answer incoming calls with connected Bluetooth button.</string>
+    <string name="call_answered_announcement">Call answered via Bluetooth button.</string>
+</resources>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_dark"
+    android:fillViewport="true"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvTitleLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/title_select_language"
+            android:textColor="@color/accent_gold"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:focusable="true"
+            android:accessibilityHeading="true" />
+
+        <!-- Subtitle Explanation -->
+        <TextView
+            android:id="@+id/tvSubtitleLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:text="@string/subtitle_select_language"
+            android:textColor="@color/text_secondary"
+            android:textSize="18sp"
+            android:lineSpacingExtra="4dp"
+            android:focusable="true" />
+
+        <!-- Language Options Radio Group -->
+        <RadioGroup
+            android:id="@+id/rgLanguages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbEnglish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/card_background"
+                android:padding="16dp"
+                android:text="English"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="English language selection" />
+
+            <RadioButton
+                android:id="@+id/rbBengali"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/card_background"
+                android:padding="16dp"
+                android:text="বাংলা (Bengali)"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="Bengali, বাংলা language selection" />
+
+            <RadioButton
+                android:id="@+id/rbSpanish"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/card_background"
+                android:padding="16dp"
+                android:text="Español (Spanish)"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="Spanish, Español language selection" />
+
+            <RadioButton
+                android:id="@+id/rbFrench"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/card_background"
+                android:padding="16dp"
+                android:text="Français (French)"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="French, Français language selection" />
+
+            <RadioButton
+                android:id="@+id/rbHindi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:layout_marginBottom="12dp"
+                android:background="@color/card_background"
+                android:padding="16dp"
+                android:text="हिन्दी (Hindi)"
+                android:textColor="@color/text_primary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:contentDescription="Hindi, हिन्दी language selection" />
+        </RadioGroup>
+
+        <!-- Spacer -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Continue Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinueLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/accent_gold"
+            android:text="@string/btn_continue"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:contentDescription="@string/btn_continue" />
+
+    </LinearLayout>
+</ScrollView>

@@ -33,10 +33,9 @@ class MediaButtonReceiver : BroadcastReceiver() {
                 intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT)
             }
 
-            Log.i(TAG, ">>> MEDIA BUTTON INTENT RECEIVED: action=${event?.action}, keyCode=${event?.keyCode} <<<")
-
             val service = CallAccessibilityService.instance
-            if (service != null) {
+            if (service != null && service.isCallActive) {
+                Log.i(TAG, ">>> MEDIA BUTTON INTENT RECEIVED during active call: action=${event?.action}, keyCode=${event?.keyCode} <<<")
                 val answered = service.performAnswerCallAction()
                 if (answered) {
                     Log.i(TAG, "Call successfully answered via MediaButtonReceiver trigger!")
@@ -47,6 +46,8 @@ class MediaButtonReceiver : BroadcastReceiver() {
                         Log.w(TAG, "Could not abort broadcast", e)
                     }
                 }
+            } else {
+                Log.d(TAG, "Media button received but no call is active. Ignoring to prevent unwanted screen interaction.")
             }
         }
     }

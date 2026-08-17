@@ -219,9 +219,9 @@ class BluetoothMonitoringService : Service() {
                     }
                 })
 
-                isActive = true
+                isActive = false
             }
-            Log.i(TAG, "MediaSession setup complete and isActive=true.")
+            Log.i(TAG, "MediaSession initialized in standby state.")
         } catch (e: Exception) {
             Log.w(TAG, "Failed to initialize MediaSession", e)
         }
@@ -229,12 +229,15 @@ class BluetoothMonitoringService : Service() {
 
     private fun handleCallAnswerTrigger() {
         val service = CallAccessibilityService.instance
-        if (service != null) {
+        if (service != null && service.isCallActive) {
+            Log.i(TAG, "MediaSession trigger received during active call -> Answering call...")
             val answered = service.performAnswerCallAction()
             if (answered) {
                 service.announceCallAnswered()
                 deactivateCallFocus()
             }
+        } else {
+            Log.d(TAG, "MediaSession trigger received but no call is active. Ignoring.")
         }
     }
 
@@ -358,8 +361,9 @@ class BluetoothMonitoringService : Service() {
             }
 
             val stateBuilder = android.media.session.PlaybackState.Builder()
-                .setState(android.media.session.PlaybackState.STATE_PAUSED, 0L, 0.0f)
+                .setState(android.media.session.PlaybackState.STATE_NONE, 0L, 0.0f)
             mediaSession?.setPlaybackState(stateBuilder.build())
+            mediaSession?.isActive = false
             Log.i(TAG, "releaseAudioFocusAndSilenceTrack: Released audio focus & silence track.")
         } catch (e: Exception) {
             Log.w(TAG, "Error releasing audio focus", e)

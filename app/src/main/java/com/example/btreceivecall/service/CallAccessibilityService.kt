@@ -100,8 +100,7 @@ class CallAccessibilityService : AccessibilityService() {
             "voice_call_answer", "video_call_answer", "accept_incoming_call",
             "answer_btn", "accept_btn", "call_accept_btn", "call_control_answer_btn",
             "iv_accept", "btn_accept", "audio_call_accept", "video_call_accept",
-            "imo_answer", "imo_accept", "call_action", "rtc_incoming_call_answer_button",
-            "action0", "action1", "action_0", "action_1", "action_button", "notification_action"
+            "imo_answer", "imo_accept", "call_action", "rtc_incoming_call_answer_button"
         )
     }
 
@@ -194,6 +193,19 @@ class CallAccessibilityService : AccessibilityService() {
         }
     }
 
+    fun onNotificationAnswerIntentRemoved(pkg: String) {
+        if (currentCallingPackage == pkg || activeAnswerPendingIntent != null) {
+            Log.i(TAG, "Notification for calling package $pkg was removed. Resetting call state.")
+            isCallActive = false
+            cancelCallEndedReset()
+            cancelAutoAnswer()
+            unregisterVolumeObserver()
+            BluetoothMonitoringService.deactivateCallFocus()
+            currentCallingPackage = null
+            activeAnswerPendingIntent = null
+        }
+    }
+
     private fun registerVolumeObserver() {
         if (!isVolumeObserverRegistered) {
             try {
@@ -239,9 +251,16 @@ class CallAccessibilityService : AccessibilityService() {
         if (eventPkg == OWN_PACKAGE) return
 
         // 1. Extract Notification Action PendingIntent if event carries notification data
-        extractNotificationAnswerIntent(event)
+        if (event.parcelableData is Notification) {
+            extractNotificationAnswerIntent(event)
+        }
 
-        // 2. Scan all windows for incoming call UI
+        // Only scan windows if event is from a verified call app, or we have an active notification intent, or call is currently active
+        if (!CALL_PACKAGES.contains(eventPkg) && activeAnswerPendingIntent == null && !isCallActive) {
+            return
+        }
+
+        // 2. Scan call-specific windows for incoming call UI
         val callFound = scanAllWindowsForIncomingCall() || (activeAnswerPendingIntent != null)
 
         if (callFound) {
@@ -267,8 +286,10 @@ class CallAccessibilityService : AccessibilityService() {
         try {
             val parcelable = event.parcelableData
             if (parcelable is Notification) {
-                val actions = parcelable.actions ?: return
                 val pkg = event.packageName?.toString() ?: ""
+                if (!CALL_PACKAGES.contains(pkg) && pkg != "com.android.systemui") return
+
+                val actions = parcelable.actions ?: return
                 for (action in actions) {
                     val title = action.title?.toString()?.lowercase() ?: ""
                     val isAnswer = title.contains("answer") || title.contains("accept") || title.contains("join") ||
@@ -302,6 +323,7 @@ class CallAccessibilityService : AccessibilityService() {
                     BluetoothMonitoringService.deactivateCallFocus()
                     currentCallingPackage = null
                     activeAnswerPendingIntent = null
+                    CallNotificationListenerService.clearPendingIntent()
                     Log.d(TAG, "Call ended confirmed after 2500ms grace period. Resetting state.")
                 }
                 callEndedResetRunnable = null
@@ -365,15 +387,21 @@ class CallAccessibilityService : AccessibilityService() {
         val nodes = mutableListOf<AccessibilityNodeInfo>()
         rootInActiveWindow?.let { root ->
             val pkg = root.packageName?.toString() ?: ""
-            if (pkg != OWN_PACKAGE) nodes.add(root)
+            if (CALL_PACKAGES.contains(pkg) && pkg != OWN_PACKAGE) {
+                nodes.add(root)
+            } else {
+                root.recycle()
+            }
         }
 
         try {
             windows?.forEach { window ->
                 window.root?.let { root ->
                     val pkg = root.packageName?.toString() ?: ""
-                    if (pkg != OWN_PACKAGE && nodes.none { it == root }) {
+                    if (CALL_PACKAGES.contains(pkg) && pkg != OWN_PACKAGE && nodes.none { it == root }) {
                         nodes.add(root)
+                    } else {
+                        root.recycle()
                     }
                 }
             }
@@ -390,13 +418,14 @@ class CallAccessibilityService : AccessibilityService() {
             return super.onKeyEvent(event)
         }
 
-        val keyCode = event.keyCode
-        val keyName = KeyEvent.keyCodeToString(keyCode)
-        Log.i(TAG, ">>> KEY EVENT INTERCEPTED in onKeyEvent: keyCode=$keyCode ($keyName), action=${event.action} <<<")
-
-        if (!BluetoothReceiver.isMasterSwitchOn(applicationContext)) {
+        // STRICT GUARD: If Master Switch is OFF or NO call is ringing/active, pass through without intercepting!
+        if (!BluetoothReceiver.isMasterSwitchOn(applicationContext) || !isCallActive) {
             return super.onKeyEvent(event)
         }
+
+        val keyCode = event.keyCode
+        val keyName = KeyEvent.keyCodeToString(keyCode)
+        Log.i(TAG, ">>> KEY EVENT INTERCEPTED during active call: keyCode=$keyCode ($keyName), action=${event.action} <<<")
 
         val isMediaKey = keyCode == KeyEvent.KEYCODE_HEADSETHOOK ||
                 keyCode == KeyEvent.KEYCODE_MEDIA_PLAY_PAUSE ||
@@ -428,15 +457,20 @@ class CallAccessibilityService : AccessibilityService() {
      * 1. Accessibility Tree Node Search + Click / Gesture (Primary & Most Reliable)
      * 2. Direct Native Notification Action PendingIntent execution
      * 3. Cellular SIM Calls: TelecomManager
-     * 4. Multi-Zone Blind Gestures
+     * 4. Multi-Zone Fallback Gesture (Only when call package is confirmed)
      */
     fun performAnswerCallAction(): Boolean {
+        if (!isCallActive && activeAnswerPendingIntent == null && CallNotificationListenerService.latestAnswerPendingIntent == null) {
+            Log.d(TAG, "performAnswerCallAction called but no active incoming call. Aborting.")
+            return false
+        }
+
         val pkg = currentCallingPackage
         Log.i(TAG, "=== START ANSWER CALL ACTION === (Current Pkg: $pkg)")
 
         var answered = false
 
-        // 1. Accessibility Tree Node Search + Click / Gesture (Primary: Clicks android:id/action0 or WhatsApp buttons)
+        // 1. Accessibility Tree Node Search + Click / Gesture (Primary: Clicks WhatsApp/Messenger/Dialer buttons)
         val rootNodes = getActiveRootNodes()
         Log.i(TAG, "Accessibility node search. Active root windows: ${rootNodes.size}")
         for ((index, rootNode) in rootNodes.withIndex()) {
@@ -458,7 +492,7 @@ class CallAccessibilityService : AccessibilityService() {
             }
         }
 
-        // 2. ALSO send Native Notification Action PendingIntent (Simultaneous trigger)
+        // 2. Direct Native Notification Action PendingIntent execution
         val pendingIntent = activeAnswerPendingIntent ?: CallNotificationListenerService.latestAnswerPendingIntent
         if (pendingIntent != null) {
             try {
@@ -479,9 +513,9 @@ class CallAccessibilityService : AccessibilityService() {
             } catch (e: Exception) {}
         }
 
-        // 4. If no node was found on screen, dispatch Multi-Zone Blind Gestures
-        if (!answered) {
-            Log.i(TAG, "No explicit answer button node found. Dispatching multi-zone blind answer gestures...")
+        // 4. Multi-Zone Blind Gestures (ONLY if call is actively verified in a supported call app)
+        if (!answered && isCallActive && pkg != null && CALL_PACKAGES.contains(pkg)) {
+            Log.i(TAG, "No explicit answer button node found for known call package $pkg. Dispatching fallback answer gesture...")
             val fallbackSuccess = dispatchBlindCallAnswerGestures()
             if (fallbackSuccess) answered = true
         }
@@ -493,6 +527,8 @@ class CallAccessibilityService : AccessibilityService() {
             unregisterVolumeObserver()
             BluetoothMonitoringService.deactivateCallFocus()
             activeAnswerPendingIntent = null
+            CallNotificationListenerService.clearPendingIntent()
+            currentCallingPackage = null
             return true
         }
 

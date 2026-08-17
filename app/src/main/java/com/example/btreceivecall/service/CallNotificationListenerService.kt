@@ -23,6 +23,10 @@ class CallNotificationListenerService : NotificationListenerService() {
         @Volatile
         var latestAnswerPendingIntent: PendingIntent? = null
             private set
+
+        fun clearPendingIntent() {
+            latestAnswerPendingIntent = null
+        }
     }
 
     override fun onCreate() {
@@ -77,8 +81,10 @@ class CallNotificationListenerService : NotificationListenerService() {
     override fun onNotificationRemoved(sbn: StatusBarNotification?) {
         super.onNotificationRemoved(sbn)
         val pkg = sbn?.packageName ?: ""
-        if (pkg.contains("whatsapp") || pkg.contains("facebook.orca") || pkg.contains("imo")) {
+        if (pkg.contains("whatsapp") || pkg.contains("facebook.orca") || pkg.contains("imo") ||
+            pkg.contains("telegram") || pkg.contains("dialer") || pkg.contains("phone") || pkg.contains("incallui")) {
             latestAnswerPendingIntent = null
+            CallAccessibilityService.instance?.onNotificationAnswerIntentRemoved(pkg)
         }
     }
 }

@@ -33,6 +33,9 @@
     <string name="main_master_switch_title">Master Service Switch</string>
     <string name="main_master_switch_on">Master Switch ON: App is monitoring for incoming calls via Bluetooth device.</string>
     <string name="main_master_switch_off">Master Switch OFF: App background activities are completely stopped to save battery.</string>
+    <string name="main_auto_answer_title">Auto-Answer Calls</string>
+    <string name="main_auto_answer_on">Auto-Answer ON: Calls will be answered automatically when detected.</string>
+    <string name="main_auto_answer_off">Auto-Answer OFF: Calls will ONLY be answered when Bluetooth button is pressed.</string>
     <string name="main_bt_status_title">Bluetooth Connection</string>
     <string name="main_bt_connected">Bluetooth Device Connected</string>
     <string name="main_bt_disconnected">No Bluetooth Device Connected</string>

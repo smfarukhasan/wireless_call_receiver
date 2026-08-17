@@ -33,6 +33,9 @@
     <string name="main_master_switch_title">Interrupteur Principal</string>
     <string name="main_master_switch_on">Interrupteur ACTIVÉ : L\'application surveille les appels entrants via le bouton Bluetooth.</string>
     <string name="main_master_switch_off">Interrupteur DÉSACTIVÉ : Les activités en arrière-plan sont arrêtées pour économiser la batterie.</string>
+    <string name="main_auto_answer_title">Réponse Automatique</string>
+    <string name="main_auto_answer_on">Réponse auto ACTIVÉE : Les appels seront décrochés automatiquement lors de la détection.</string>
+    <string name="main_auto_answer_off">Réponse auto DÉSACTIVÉE : Les appels seront décrochés UNIQUEMENT en appuyant sur le bouton Bluetooth.</string>
     <string name="main_bt_status_title">Connexion Bluetooth</string>
     <string name="main_bt_connected">Appareil Bluetooth connecté</string>
     <string name="main_bt_disconnected">Aucun appareil Bluetooth connecté</string>

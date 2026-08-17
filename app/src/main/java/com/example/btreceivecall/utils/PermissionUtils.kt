@@ -34,6 +34,21 @@ object PermissionUtils {
     }
 
     /**
+     * Checks if Post Notifications permission is granted.
+     * Required on Android 13 (API 33) and higher.
+     */
+    fun hasNotificationPermission(context: Context): Boolean {
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.POST_NOTIFICATIONS
+            ) == PackageManager.PERMISSION_GRANTED
+        } else {
+            true
+        }
+    }
+
+    /**
      * Checks whether CallAccessibilityService is enabled in Android Accessibility Settings.
      */
     fun isAccessibilityServiceEnabled(context: Context): Boolean {

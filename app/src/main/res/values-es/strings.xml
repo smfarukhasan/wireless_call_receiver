@@ -33,6 +33,9 @@
     <string name="main_master_switch_title">Interruptor Principal</string>
     <string name="main_master_switch_on">Interruptor ENCENDIDO: La aplicación está monitoreando llamadas entrantes vía Bluetooth.</string>
     <string name="main_master_switch_off">Interruptor APAGADO: Actividades en segundo plano detenidas para ahorrar batería.</string>
+    <string name="main_auto_answer_title">Respuesta Automática</string>
+    <string name="main_auto_answer_on">Respuesta automática ACTIVADA: Las llamadas se contestarán automáticamente al detectarse.</string>
+    <string name="main_auto_answer_off">Respuesta automática DESACTIVADA: Las llamadas SOLO se contestarán al presionar el botón Bluetooth.</string>
     <string name="main_bt_status_title">Conexión Bluetooth</string>
     <string name="main_bt_connected">Dispositivo Bluetooth conectado</string>
     <string name="main_bt_disconnected">Ningún dispositivo Bluetooth conectado</string>

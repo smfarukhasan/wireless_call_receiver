@@ -33,6 +33,9 @@
     <string name="main_master_switch_title">मास्टर सर्विस स्विच</string>
     <string name="main_master_switch_on">मास्टर स्विच ऑन: ब्लूटूथ डिवाइस के माध्यम से कॉल प्राप्त करने के लिए ऐप सक्रिय है।</string>
     <string name="main_master_switch_off">मास्टर स्विच ऑफ: बैटरी बचाने के लिए बैकग्राउंड गतिविधियां पूरी तरह बंद हैं।</string>
+    <string name="main_auto_answer_title">ऑटो-कॉल उत्तर (Auto-Answer)</string>
+    <string name="main_auto_answer_on">ऑटो-उत्तर चालू: कॉल आते ही स्वचालित रूप से उठाई जाएगी।</string>
+    <string name="main_auto_answer_off">ऑटो-उत्तर बंद: कॉल केवल ब्लूटूथ बटन दबाने पर ही उठाई जाएगी।</string>
     <string name="main_bt_status_title">ब्लूटूथ कनेक्शन की स्थिति</string>
     <string name="main_bt_connected">ब्लूटूथ डिवाइस कनेक्टेड है</string>
     <string name="main_bt_disconnected">कोई ब्लूटूथ डिवाइस कनेक्टेड नहीं है</string>

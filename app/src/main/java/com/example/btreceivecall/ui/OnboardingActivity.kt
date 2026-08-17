@@ -21,9 +21,9 @@ class OnboardingActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityOnboardingBinding
 
-    private val bluetoothPermissionLauncher = registerForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) { isGranted ->
+    private val permissionsLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { _ ->
         updateStatusIndicators()
     }
 
@@ -45,10 +45,20 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        // Step 1: Bluetooth Connect Permission
+        // Step 1: Bluetooth Connect, Notification & Phone Call Permissions
         binding.btnGrantBt.setOnClickListener {
+            val perms = mutableListOf<String>()
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                bluetoothPermissionLauncher.launch(Manifest.permission.BLUETOOTH_CONNECT)
+                perms.add(Manifest.permission.BLUETOOTH_CONNECT)
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                perms.add(Manifest.permission.POST_NOTIFICATIONS)
+            }
+            // Phone call permissions for TelecomManager.acceptRingingCall()
+            perms.add(Manifest.permission.ANSWER_PHONE_CALLS)
+            perms.add(Manifest.permission.READ_PHONE_STATE)
+            if (perms.isNotEmpty()) {
+                permissionsLauncher.launch(perms.toTypedArray())
             } else {
                 updateStatusIndicators()
             }

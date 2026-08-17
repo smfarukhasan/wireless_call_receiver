@@ -33,6 +33,9 @@
     <string name="main_master_switch_title">মাস্টার সার্ভিস সুইচ</string>
     <string name="main_master_switch_on">মাস্টার সুইচ অন: ব্লুটুথ বোতামের মাধ্যমে কল রিসিভ করার জন্য অ্যাপ সক্রিয় রয়েছে।</string>
     <string name="main_master_switch_off">মাস্টার সুইচ অফ: ব্যাটারি বাঁচাতে ব্যাকগ্রাউন্ড কার্যক্রম সম্পূর্ণ বন্ধ রাখা হয়েছে।</string>
+    <string name="main_auto_answer_title">স্বয়ংক্রিয় কল রিসিভ (Auto-Answer)</string>
+    <string name="main_auto_answer_on">অটো-রিসিভ অন: কল আসলে নিজে থেকেই স্বয়ংক্রিয়ভাবে রিসিভ হবে।</string>
+    <string name="main_auto_answer_off">অটো-রিসিভ অফ: কল আসলে নিজে থেকে রিসিভ হবে না, শুধুমাত্র বোতাম চাপলে রিসিভ হবে।</string>
     <string name="main_bt_status_title">ব্লুটুথ সংযোগ অবস্থা</string>
     <string name="main_bt_connected">ব্লুটুথ ডিভাইস সংযুক্ত রয়েছে</string>
     <string name="main_bt_disconnected">কোন ব্লুটুথ ডিভাইস সংযুক্ত নেই</string>

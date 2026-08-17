@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Accessible High-Contrast Theme Colors -->
+    <!-- Modern Standard Dark Theme Colors (Slate & Royal Blue Accent) -->
     <color name="primary_dark">#0F172A</color>
     <color name="surface_dark">#1E293B</color>
-    <color name="card_background">#334155</color>
-    <color name="accent_gold">#F59E0B</color>
-    <color name="accent_gold_bright">#FBBF24</color>
+    <color name="card_background">#1E293B</color>
+    <color name="accent_blue">#3B82F6</color>
+    <color name="accent_blue_bright">#60A5FA</color>
     <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#E2E8F0</color>
+    <color name="text_secondary">#94A3B8</color>
     <color name="status_green">#10B981</color>
     <color name="status_red">#EF4444</color>
-    <color name="divider_color">#475569</color>
+    <color name="divider_color">#334155</color>
     
     <!-- Standard Colors -->
     <color name="black">#000000</color>
@@ -18,5 +18,5 @@
 
     <!-- Launcher Icon Colors -->
     <color name="ic_launcher_background">#0F172A</color>
-    <color name="ic_launcher_foreground">#F59E0B</color>
+    <color name="ic_launcher_foreground">#3B82F6</color>
 </resources>

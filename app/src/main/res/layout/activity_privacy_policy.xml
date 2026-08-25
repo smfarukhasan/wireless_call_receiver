@@ -1,52 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark"
-    android:fillViewport="true"
-    android:padding="20dp">
+    android:background="@color/primary_dark">
 
-    <LinearLayout
+    <!-- Ambient Glowing Background Circles -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:importantForAccessibility="no">
 
-        <TextView
-            android:id="@+id/tvPrivacyTitle"
+        <View
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="-70dp"
+            android:background="@drawable/ambient_circle_blue"
+            android:importantForAccessibility="no" />
+
+        <View
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="-60dp"
+            android:layout_marginBottom="-50dp"
+            android:background="@drawable/ambient_circle_purple"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/title_privacy_terms"
-            android:textColor="@color/accent_blue"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:focusable="true"
-            android:accessibilityHeading="true" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/tvPrivacyContent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="24dp"
-            android:textColor="@color/text_primary"
-            android:textSize="16sp"
-            android:lineSpacingExtra="4dp"
-            android:focusable="true" />
+            <!-- Title Header -->
+            <TextView
+                android:id="@+id/tvPrivacyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/title_privacy_terms"
+                android:textColor="@color/accent_blue_bright"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:accessibilityHeading="true" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnBackPrivacy"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="@color/accent_blue"
-            android:text="Close &amp; Back"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp" />
+            <!-- Frosted Glass Card Container -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
 
-    </LinearLayout>
-</ScrollView>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Section 1: Accessibility & Purpose -->
+                    <TextView
+                        android:id="@+id/tvSecAccessibilityTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_sec_accessibility_title"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvSecAccessibilityDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/privacy_sec_accessibility_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp"
+                        android:lineSpacingExtra="3dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <!-- Section 2: Zero Data Collection -->
+                    <TextView
+                        android:id="@+id/tvSecDataTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_sec_data_title"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvSecDataDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/privacy_sec_data_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp"
+                        android:lineSpacingExtra="3dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <!-- Section 3: 100% Offline -->
+                    <TextView
+                        android:id="@+id/tvSecOfflineTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_sec_offline_title"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvSecOfflineDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="@string/privacy_sec_offline_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp"
+                        android:lineSpacingExtra="3dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <!-- Section 4: Accessibility API Compliance -->
+                    <TextView
+                        android:id="@+id/tvSecTermsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_sec_terms_title"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvSecTermsDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="@string/privacy_sec_terms_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp"
+                        android:lineSpacingExtra="3dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Close & Return Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackPrivacy"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/accent_blue"
+                android:text="@string/btn_close_privacy"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

@@ -74,6 +74,12 @@ class OnboardingActivity : AppCompatActivity() {
             PermissionUtils.requestIgnoreBatteryOptimization(this)
         }
 
+        // Privacy Policy & Terms Button in Setup
+        binding.btnOnboardingPrivacy.setOnClickListener {
+            val intent = Intent(this, PrivacyPolicyActivity::class.java)
+            startActivity(intent)
+        }
+
         // Finish Setup Button
         binding.btnFinishSetup.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java).apply {

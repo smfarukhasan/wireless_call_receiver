@@ -36,9 +36,19 @@
     <string name="main_auto_answer_title">ऑटो-कॉल उत्तर (Auto-Answer)</string>
     <string name="main_auto_answer_on">ऑटो-उत्तर चालू: कॉल आते ही स्वचालित रूप से उठाई जाएगी।</string>
     <string name="main_auto_answer_off">ऑटो-उत्तर बंद: कॉल केवल ब्लूटूथ बटन दबाने पर ही उठाई जाएगी।</string>
+    
+    <string name="main_locked_screen_receive_title">लॉक स्क्रीन कॉल रिसीव</string>
+    <string name="main_locked_screen_receive_desc_on">लॉक स्क्रीन ऑन: फ़ोन लॉक होने पर बटन दबाने पर कॉल रिसीव होगी।</string>
+    <string name="main_locked_screen_receive_desc_off">लॉक स्क्रीन ऑफ: फ़ोन लॉक होने पर कॉल रिसीव नहीं होगी।</string>
+    
+    <string name="main_unlocked_screen_receive_title">अनलॉक स्क्रीन कॉल रिसीव</string>
+    <string name="main_unlocked_screen_receive_desc_on">अनलॉक स्क्रीन ऑन: फ़ोन अनलॉक होने पर बटन दबाने पर कॉल रिसीव होगी।</string>
+    <string name="main_unlocked_screen_receive_desc_off">अनलॉक स्क्रीन ऑफ: फ़ोन अनलॉक होने पर कॉल रिसीव नहीं होगी।</string>
+
     <string name="main_bt_status_title">ब्लूटूथ कनेक्शन की स्थिति</string>
     <string name="main_bt_connected">ब्लूटूथ डिवाइस कनेक्टेड है</string>
     <string name="main_bt_disconnected">कोई ब्लूटूथ डिवाइस कनेक्टेड नहीं है</string>
+    <string name="msg_bt_connect_required">मास्टर सेवा सक्रिय करने के लिए कृपया पहले अपना ब्लूटूथ हेडफ़ोन या नेकबैंड कनेक्ट करें।</string>
     <string name="main_acc_status_title">एक्सेसिबिलिटी सर्विस स्थिति</string>
     <string name="main_batt_status_title">बैटरी ऑप्टिमाइज़ेशन स्थिति</string>
     <string name="btn_change_language">भाषा बदलें</string>
@@ -46,9 +56,34 @@
 
     <!-- Accessibility Service & Notifications -->
     <string name="accessibility_service_label">बीटी रिसीव कॉल सर्विस</string>
-    <string name="accessibility_service_description">व्हाट्सएप, मैसेंजर और फ़ोन की इनकमिंग कॉल पर नज़र रखता है। ब्लूटूथ बटन दबाने पर कॉल उठाता है। 100% ऑफ़लाइन और सुरक्षित।</string>
+    <string name="btn_privacy_terms">गोपनीयता नीति और शर्तें</string>
+    <string name="title_privacy_terms">गोपनीयता नीति और सेवा की शर्तें</string>
+    <string name="accessibility_service_description" formatted="false">व्हाट्सएप, मैसेंजर और फ़ोन की इनकमिंग कॉल पर नज़र रखता है। ब्लूटूथ बटन दबाने पर कॉल उठाता है। 100% ऑफ़लाइन और सुरक्षित।</string>
     <string name="notification_channel_name">बीटी रिसीव कॉल स्थिति</string>
     <string name="notification_title">बीटी कॉल रिसीवर सक्रिय</string>
     <string name="notification_desc">ब्लूटूथ बटन से इनकमिंग कॉल उठाने के लिए तैयार।</string>
-    <string name="call_answered_announcement">ब्लूटूथ बटन से कॉल उठाई गई।</string>
+    <string name="call_answered_announcement">ब्लूटूथ बटन से कॉल सफलतापूर्वक उठाई गई।</string>
+
+    <!-- System Level TalkBack Accessibility Descriptions -->
+    <string name="acc_master_switch_desc">मास्टर सेवा स्विच। ब्लूटूथ डिवाइस कनेक्ट होने पर अपने आप चालू होगा और डिस्कनेक्ट होने पर बैटरी बचाने के लिए बंद हो जाएगा।</string>
+    <string name="acc_locked_switch_desc">लॉक स्क्रीन कॉल रिसीव स्विच। फ़ोन लॉक होने पर हेडफ़ोन बटन से कॉल उठेगी या नहीं, यह नियंत्रित करता है।</string>
+    <string name="acc_unlocked_switch_desc">अनलॉक स्क्रीन कॉल रिसीव स्विच। फ़ोन अनलॉक होने पर हेडफ़ोन बटन से कॉल उठेगी या नहीं, यह नियंत्रित करता है।</string>
+    <string name="acc_auto_answer_switch_desc">ऑटो आंसर स्विच। चालू होने पर कॉल आने पर बिना बटन दबाए अपने आप कॉल उठ जाएगी।</string>
+    <string name="acc_btn_change_language_desc">ऐप की भाषा बदलें। भाषा चुनने के लिए दो बार टैप करें।</string>
+    <string name="acc_btn_rerun_setup_desc">सेटअप विज़ार्ड फिर से चलाएं। अनुमतियों की जांच करने के लिए दो बार टैप करें।</string>
+    <string name="acc_btn_privacy_desc">गोपनीयता नीति और शर्तें। ऑफ़लाइन गोपनीयता नीति देखने के लिए दो बार टैप करें।</string>
+
+    <!-- Detailed Privacy Policy & Terms Content -->
+    <string name="btn_close_privacy">बंद करें और वापस जाएं</string>
+    <string name="privacy_sec_accessibility_title">1. उद्देश्य और टॉकबैक (TalkBack) एक्सेसिबिलिटी</string>
+    <string name="privacy_sec_accessibility_desc">बीटी रिसीव कॉल ऐप मुख्य रूप से दृष्टिबाधित व्यक्तियों की सहायता के लिए एक विशेष एक्सेसिबिलिटी टूल के रूप में बनाया गया है। इसके माध्यम से बिना स्क्रीन देखे या छुए केवल ब्लूटूथ हेडफ़ोन बटन दबाकर फ़ोन, व्हाट्सएप, मैसेंजर और टेलीग्राम कॉल उठाए जा सकते हैं।</string>
+    
+    <string name="privacy_sec_data_title">2. शून्य डेटा संग्रह (Zero Data Collection)</string>
+    <string name="privacy_sec_data_desc">हम आपकी पूर्ण गोपनीयता का सम्मान करते हैं। यह ऐप उपयोगकर्ता की कोई भी व्यक्तिगत जानकारी, संपर्क सूची, वॉयस रिकॉर्डिंग या कॉल डेटा एकत्र या साझा नहीं करता है।</string>
+    
+    <string name="privacy_sec_offline_title">3. 100% ऑफ़लाइन और सुरक्षित</string>
+    <string name="privacy_sec_offline_desc">यह ऐप पूरी तरह से आपके डिवाइस पर ऑफ़लाइन काम करता है। इसमें कोई इंटरनेट अनुमति नहीं है।</string>
+    
+    <string name="privacy_sec_terms_title">4. एक्सेसिबिलिटी सर्विस का सख्त अनुपालन</string>
+    <string name="privacy_sec_terms_desc">एंड्रॉइड एक्सेसिबिलिटी सर्विस का उपयोग केवल ब्लूटूथ बटन दबाए जाने पर इनकमिंग कॉल उठाने के लिए किया जाता है।</string>
 </resources>

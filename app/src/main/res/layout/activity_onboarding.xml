@@ -1,245 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark"
-    android:fillViewport="true"
-    android:padding="20dp">
+    android:background="@color/primary_dark">
 
-    <LinearLayout
+    <!-- Ambient Glowing Background Circles -->
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:importantForAccessibility="no">
 
-        <!-- Title -->
-        <TextView
-            android:id="@+id/tvTitleOnboarding"
+        <View
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:layout_gravity="top|end"
+            android:layout_marginTop="-50dp"
+            android:layout_marginEnd="-70dp"
+            android:background="@drawable/ambient_circle_blue"
+            android:importantForAccessibility="no" />
+
+        <View
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="-80dp"
+            android:background="@drawable/ambient_circle_purple"
+            android:importantForAccessibility="no" />
+
+        <View
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="-60dp"
+            android:layout_marginBottom="-50dp"
+            android:background="@drawable/ambient_circle_cyan"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="24dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/title_onboarding"
-            android:textColor="@color/accent_blue"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:focusable="true"
-            android:accessibilityHeading="true" />
+            android:orientation="vertical">
 
-        <!-- Subtitle -->
-        <TextView
-            android:id="@+id/tvSubtitleOnboarding"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
-            android:text="@string/subtitle_onboarding"
-            android:textColor="@color/text_secondary"
-            android:textSize="17sp"
-            android:lineSpacingExtra="4dp"
-            android:focusable="true" />
-
-        <!-- Step 1: Bluetooth Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/card_background"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/divider_color"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitleOnboarding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="12dp"
+                android:text="@string/title_onboarding"
+                android:textColor="@color/accent_blue_bright"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:accessibilityHeading="true" />
 
-                <TextView
-                    android:id="@+id/tvBtTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/perm_bt_title"
-                    android:textColor="@color/text_primary"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvBtDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/perm_bt_desc"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="16sp"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvBtStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/status_not_granted"
-                    android:textColor="@color/status_red"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnGrantBt"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/accent_blue"
-                    android:text="@string/perm_bt_grant_btn"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:cornerRadius="8dp" />
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Step 2: Accessibility Service Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            app:cardBackgroundColor="@color/card_background"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/divider_color"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
+            <!-- Subtitle -->
+            <TextView
+                android:id="@+id/tvSubtitleOnboarding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/subtitle_onboarding"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp"
+                android:lineSpacingExtra="3dp"
+                android:gravity="center" />
 
-                <TextView
-                    android:id="@+id/tvAccTitle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/perm_acc_title"
-                    android:textColor="@color/text_primary"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvAccDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/perm_acc_desc"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="16sp"
-                    android:focusable="true" />
-
-                <TextView
-                    android:id="@+id/tvAccStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/status_disabled"
-                    android:textColor="@color/status_red"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnGrantAcc"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/accent_blue"
-                    android:text="@string/perm_acc_grant_btn"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:cornerRadius="8dp" />
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Step 3: Battery Optimization Card -->
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            app:cardBackgroundColor="@color/card_background"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="4dp"
-            app:strokeColor="@color/divider_color"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
+            <!-- Step 1: Bluetooth Card -->
+            <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp">
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
 
-                <TextView
-                    android:id="@+id/tvBattTitle"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/perm_batt_title"
-                    android:textColor="@color/text_primary"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/tvBattDesc"
+                    <TextView
+                        android:id="@+id/tvBtTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perm_bt_title"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvBtDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perm_bt_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/tvBtStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/status_not_granted"
+                        android:textColor="@color/status_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantBt"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/accent_blue"
+                        android:text="@string/perm_bt_grant_btn"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Step 2: Accessibility Service Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:text="@string/perm_batt_desc"
-                    android:textColor="@color/text_secondary"
-                    android:textSize="16sp"
-                    android:focusable="true" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <TextView
-                    android:id="@+id/tvBattStatus"
+                    <TextView
+                        android:id="@+id/tvAccTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perm_acc_title"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
+
+                    <TextView
+                        android:id="@+id/tvAccDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perm_acc_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/tvAccStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/status_disabled"
+                        android:textColor="@color/status_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantAcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/accent_blue"
+                        android:text="@string/perm_acc_grant_btn"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Step 3: Battery Optimization Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="@string/status_disabled"
-                    android:textColor="@color/status_red"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
+                    android:orientation="vertical"
+                    android:padding="16dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btnGrantBatt"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="12dp"
-                    android:backgroundTint="@color/accent_blue"
-                    android:text="@string/perm_batt_grant_btn"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:cornerRadius="8dp" />
+                    <TextView
+                        android:id="@+id/tvBattTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perm_batt_title"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:accessibilityHeading="true" />
 
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <TextView
+                        android:id="@+id/tvBattDesc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perm_batt_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
 
-        <!-- Finish Setup Button -->
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnFinishSetup"
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:layout_marginBottom="24dp"
-            android:backgroundTint="@color/status_green"
-            android:text="@string/btn_finish_setup"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            app:cornerRadius="12dp" />
+                    <TextView
+                        android:id="@+id/tvBattStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/status_disabled"
+                        android:textColor="@color/status_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
-    </LinearLayout>
-</ScrollView>
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantBatt"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/accent_blue"
+                        android:text="@string/perm_batt_grant_btn"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Finish Setup Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFinishSetup"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"
+                android:backgroundTint="@color/status_green"
+                android:text="@string/btn_finish_setup"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="14dp" />
+
+            <!-- Privacy Policy & Terms Link Button in Setup -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOnboardingPrivacy"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/btn_privacy_terms"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp"
+                android:contentDescription="@string/acc_btn_privacy_desc" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

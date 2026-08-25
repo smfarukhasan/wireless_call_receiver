@@ -36,9 +36,19 @@
     <string name="main_auto_answer_title">Respuesta Automática</string>
     <string name="main_auto_answer_on">Respuesta automática ACTIVADA: Las llamadas se contestarán automáticamente al detectarse.</string>
     <string name="main_auto_answer_off">Respuesta automática DESACTIVADA: Las llamadas SOLO se contestarán al presionar el botón Bluetooth.</string>
+    
+    <string name="main_locked_screen_receive_title">Recibir en Pantalla Bloqueada</string>
+    <string name="main_locked_screen_receive_desc_on">Pantalla Bloqueada ACTIVADA: El botón responde llamadas con pantalla bloqueada.</string>
+    <string name="main_locked_screen_receive_desc_off">Pantalla Bloqueada DESACTIVADA: No se responderán llamadas si la pantalla está bloqueada.</string>
+    
+    <string name="main_unlocked_screen_receive_title">Recibir en Pantalla Desbloqueada</string>
+    <string name="main_unlocked_screen_receive_desc_on">Pantalla Desbloqueada ACTIVADA: El botón responde llamadas con pantalla desbloqueada.</string>
+    <string name="main_unlocked_screen_receive_desc_off">Pantalla Desbloqueada DESACTIVADA: No se responderán llamadas si la pantalla está desbloqueada.</string>
+
     <string name="main_bt_status_title">Conexión Bluetooth</string>
     <string name="main_bt_connected">Dispositivo Bluetooth conectado</string>
     <string name="main_bt_disconnected">Ningún dispositivo Bluetooth conectado</string>
+    <string name="msg_bt_connect_required">Conecte sus auriculares o banda para el cuello Bluetooth primero para activar el Servicio Maestro.</string>
     <string name="main_acc_status_title">Servicio de Accesibilidad</string>
     <string name="main_batt_status_title">Exención de Optimización de Batería</string>
     <string name="btn_change_language">Cambiar Idioma</string>
@@ -46,9 +56,34 @@
 
     <!-- Accessibility Service & Notifications -->
     <string name="accessibility_service_label">Servicio BT Recepción de Llamadas</string>
-    <string name="accessibility_service_description">Monitorea llamadas entrantes en llamadas estándar, WhatsApp, Messenger y Telegram. Simula contestar al presionar el botón del auricular Bluetooth. 100% fuera de línea.</string>
+    <string name="btn_privacy_terms">Política de privacidad y términos</string>
+    <string name="title_privacy_terms">Política de privacidad y términos del servicio</string>
+    <string name="accessibility_service_description" formatted="false">Monitorea llamadas entrantes en llamadas estándar, WhatsApp, Messenger y Telegram. Simula contestar al presionar el botón del auricular Bluetooth. 100% fuera de línea.</string>
     <string name="notification_channel_name">Estado de Recepción BT</string>
     <string name="notification_title">Receptor de Llamadas BT Activo</string>
     <string name="notification_desc">Listo para contestar llamadas entrantes con el botón Bluetooth.</string>
-    <string name="call_answered_announcement">Llamada contestada mediante botón Bluetooth.</string>
+    <string name="call_answered_announcement">Llamada contestada con éxito mediante botón Bluetooth.</string>
+
+    <!-- System Level TalkBack Accessibility Descriptions -->
+    <string name="acc_master_switch_desc">Interruptor Principal. Se activa automáticamente cuando se conecta un dispositivo Bluetooth y se desactiva al desconectarse para ahorrar batería.</string>
+    <string name="acc_locked_switch_desc">Interruptor de Recepción en Pantalla Bloqueada. Controla si el botón de los auriculares responde llamadas con la pantalla bloqueada.</string>
+    <string name="acc_unlocked_switch_desc">Interruptor de Recepción en Pantalla Desbloqueada. Controla si el botón de los auriculares responde llamadas con la pantalla desbloqueada.</string>
+    <string name="acc_auto_answer_switch_desc">Interruptor de Respuesta Automática. Si está activado, responde automáticamente las llamadas entrantes sin presionar ningún botón.</string>
+    <string name="acc_btn_change_language_desc">Cambiar idioma de la aplicación. Toque dos veces para seleccionar idioma.</string>
+    <string name="acc_btn_rerun_setup_desc">Reejecutar asistente de configuración. Toque dos veces para revisar permisos.</string>
+    <string name="acc_btn_privacy_desc">Política de privacidad y términos. Toque dos veces para ver la política de cero recolección de datos.</string>
+
+    <!-- Detailed Privacy Policy & Terms Content -->
+    <string name="btn_close_privacy">Cerrar y volver</string>
+    <string name="privacy_sec_accessibility_title">1. Propósito y Accesibilidad TalkBack</string>
+    <string name="privacy_sec_accessibility_desc">BT Recepción de Llamadas está diseñado como una herramienta de accesibilidad para personas ciegas o con discapacidad visual, permitiendo contestar llamadas entrantes de Teléfono, WhatsApp, Messenger y Telegram mediante botones Bluetooth físicos sin tocar la pantalla.</string>
+    
+    <string name="privacy_sec_data_title">2. Cero Recolección de Datos</string>
+    <string name="privacy_sec_data_desc">Respetamos su privacidad absoluta. La aplicación NO recopila, almacena ni comparte ninguna información personal, contactos, grabaciones de voz o metadatos de llamadas.</string>
+    
+    <string name="privacy_sec_offline_title">3. 100% Fuera de Línea y Seguro</string>
+    <string name="privacy_sec_offline_desc">La aplicación funciona completamente fuera de línea en su dispositivo sin ningún permiso de Internet.</string>
+    
+    <string name="privacy_sec_terms_title">4. Cumplimiento Estricto del Servicio de Accesibilidad</string>
+    <string name="privacy_sec_terms_desc">El servicio de accesibilidad se utiliza estricta y exclusivamente para simular el gesto de responder llamadas entrantes tras presionar el botón Bluetooth verificado.</string>
 </resources>

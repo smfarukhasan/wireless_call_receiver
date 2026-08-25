@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BT Receive Call</string>
+    <string name="app_subtitle">Smart Bluetooth Call Assistant</string>
+    <string name="dashboard_status_title">System Status Dashboard</string>
 
     <!-- Language Selection Screen -->
     <string name="title_select_language">Select Language</string>
@@ -36,9 +38,19 @@
     <string name="main_auto_answer_title">Auto-Answer Calls</string>
     <string name="main_auto_answer_on">Auto-Answer ON: Calls will be answered automatically when detected.</string>
     <string name="main_auto_answer_off">Auto-Answer OFF: Calls will ONLY be answered when Bluetooth button is pressed.</string>
+    
+    <string name="main_locked_screen_receive_title">Lock Screen Call Receive</string>
+    <string name="main_locked_screen_receive_desc_on">Lock Screen ON: Button press receives calls when phone is locked.</string>
+    <string name="main_locked_screen_receive_desc_off">Lock Screen OFF: Calls will not be received when phone is locked.</string>
+    
+    <string name="main_unlocked_screen_receive_title">Unlocked Screen Call Receive</string>
+    <string name="main_unlocked_screen_receive_desc_on">Unlocked Screen ON: Button press receives calls when phone is unlocked.</string>
+    <string name="main_unlocked_screen_receive_desc_off">Unlocked Screen OFF: Calls will not be received when phone is unlocked.</string>
+
     <string name="main_bt_status_title">Bluetooth Connection</string>
     <string name="main_bt_connected">Bluetooth Device Connected</string>
     <string name="main_bt_disconnected">No Bluetooth Device Connected</string>
+    <string name="msg_bt_connect_required">Please connect your Bluetooth headphones or neckband first to activate the Master Service.</string>
     <string name="main_acc_status_title">Accessibility Service</string>
     <string name="main_batt_status_title">Battery Optimization Exemption</string>
     <string name="btn_change_language">Change Language</string>
@@ -48,9 +60,32 @@
 
     <!-- Accessibility Service & Notifications -->
     <string name="accessibility_service_label">BT Receive Call Service</string>
-    <string name="accessibility_service_description">Monitors incoming call screens for standard dialers, WhatsApp, Messenger, and Telegram. Simulates answer action when Bluetooth headset media button is pressed. Safe and 100% offline.</string>
+    <string name="accessibility_service_description" formatted="false">Monitors incoming call screens for standard dialers, WhatsApp, Messenger, and Telegram. Simulates answer action when Bluetooth headset media button is pressed. Safe and 100% offline.</string>
     <string name="notification_channel_name">BT Receive Call Status</string>
     <string name="notification_title">BT Call Receiver Active</string>
     <string name="notification_desc">Ready to answer incoming calls with connected Bluetooth button.</string>
-    <string name="call_answered_announcement">Call answered via Bluetooth button.</string>
+
+    <!-- System Level TalkBack Accessibility Descriptions -->
+    <string name="acc_master_switch_desc">Master Service Switch. Automatically turns on when Bluetooth device connects, and turns off when disconnected to save battery.</string>
+    <string name="acc_locked_switch_desc">Lock Screen Call Receive Switch. Controls whether headphone button answers calls when phone is locked.</string>
+    <string name="acc_unlocked_switch_desc">Unlocked Screen Call Receive Switch. Controls whether headphone button answers calls when phone is unlocked.</string>
+    <string name="acc_auto_answer_switch_desc">Auto Answer Switch. When enabled, incoming calls will be answered automatically after a short delay without pressing a button.</string>
+    <string name="acc_btn_change_language_desc">Change Application Language. Double tap to select between English, Bengali, Spanish, French, or Hindi.</string>
+    <string name="acc_btn_rerun_setup_desc">Re-run Setup Wizard. Double tap to review or grant Bluetooth, Accessibility, and Battery permissions.</string>
+    <string name="acc_btn_privacy_desc">Privacy Policy and Terms. Double tap to view 100% offline privacy and zero-data-collection policy.</string>
+    <string name="call_answered_announcement">Call answered successfully via Bluetooth button.</string>
+
+    <!-- Detailed Privacy Policy & Terms Content -->
+    <string name="btn_close_privacy">Close &amp; Return</string>
+    <string name="privacy_sec_accessibility_title">1. Purpose &amp; TalkBack Accessibility</string>
+    <string name="privacy_sec_accessibility_desc">BT Receive Call is specifically designed as an assistive accessibility tool for blind and visually impaired individuals. It allows seamless, safe answering of incoming phone, WhatsApp, Messenger, and Telegram calls via Bluetooth headphone/neckband hardware buttons without needing to touch or locate on-screen buttons.</string>
+    
+    <string name="privacy_sec_data_title">2. Zero Data Collection</string>
+    <string name="privacy_sec_data_desc">We respect your absolute privacy. The application does NOT collect, store, transmit, or share any personal information, contact lists, audio recordings, or call metadata with anyone.</string>
+    
+    <string name="privacy_sec_offline_title">3. 100% Offline &amp; Safe</string>
+    <string name="privacy_sec_offline_desc">This application operates completely offline on your device. It does not require or request Internet permissions (android.permission.INTERNET is completely absent).</string>
+    
+    <string name="privacy_sec_terms_title">4. Strict Accessibility API Compliance</string>
+    <string name="privacy_sec_terms_desc">The Android Accessibility Service is utilized strictly and exclusively to trigger the incoming call accept gesture upon receiving verified Bluetooth media button hardware events. No other screen interactions, keylogging, or background monitoring are performed.</string>
 </resources>

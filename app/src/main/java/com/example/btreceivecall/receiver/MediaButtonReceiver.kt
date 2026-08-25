@@ -34,17 +34,14 @@ class MediaButtonReceiver : BroadcastReceiver() {
             }
 
             val service = CallAccessibilityService.instance
-            if (service != null && service.isCallActive) {
+            if (service != null && service.isCallActive &&
+                event?.action == KeyEvent.ACTION_DOWN && event.repeatCount == 0) {
                 Log.i(TAG, ">>> MEDIA BUTTON INTENT RECEIVED during active call: action=${event?.action}, keyCode=${event?.keyCode} <<<")
-                val answered = service.performAnswerCallAction()
-                if (answered) {
-                    Log.i(TAG, "Call successfully answered via MediaButtonReceiver trigger!")
-                    service.announceCallAnswered()
-                    try {
-                        abortBroadcast()
-                    } catch (e: Exception) {
-                        Log.w(TAG, "Could not abort broadcast", e)
-                    }
+                service.handleButtonPressFromMediaSession(event.eventTime)
+                try {
+                    abortBroadcast()
+                } catch (e: Exception) {
+                    Log.w(TAG, "Could not abort broadcast", e)
                 }
             } else {
                 Log.d(TAG, "Media button received but no call is active. Ignoring to prevent unwanted screen interaction.")

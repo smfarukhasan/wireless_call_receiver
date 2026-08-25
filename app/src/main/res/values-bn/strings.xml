@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">বিটি রিসিভ কল</string>
+    <string name="app_subtitle">স্মার্ট ব্লুটুথ কল অ্যাসিস্ট্যান্ট</string>
+    <string name="dashboard_status_title">সিস্টেম স্ট্যাটাস ড্যাশবোর্ড</string>
 
     <!-- Language Selection Screen -->
     <string name="title_select_language">ভাষা নির্বাচন করুন</string>
@@ -36,9 +38,19 @@
     <string name="main_auto_answer_title">স্বয়ংক্রিয় কল রিসিভ (Auto-Answer)</string>
     <string name="main_auto_answer_on">অটো-রিসিভ অন: কল আসলে নিজে থেকেই স্বয়ংক্রিয়ভাবে রিসিভ হবে।</string>
     <string name="main_auto_answer_off">অটো-রিসিভ অফ: কল আসলে নিজে থেকে রিসিভ হবে না, শুধুমাত্র বোতাম চাপলে রিসিভ হবে।</string>
+    
+    <string name="main_locked_screen_receive_title">লক স্ক্রিন কল রিসিভ</string>
+    <string name="main_locked_screen_receive_desc_on">লক স্ক্রিন অন: ফোন লক থাকা অবস্থায় বোতাম চাপলে কল রিসিভ হবে।</string>
+    <string name="main_locked_screen_receive_desc_off">লক স্ক্রিন অফ: ফোন লক থাকা অবস্থায় কোনো কল রিসিভ হবে না।</string>
+    
+    <string name="main_unlocked_screen_receive_title">আনলক অবস্থায় কল রিসিভ</string>
+    <string name="main_unlocked_screen_receive_desc_on">আনলক অবস্থা অন: ফোন আনলক থাকা অবস্থায় বোতাম চাপলে কল রিসিভ হবে।</string>
+    <string name="main_unlocked_screen_receive_desc_off">আনলক অবস্থা অফ: ফোন আনলক থাকা অবস্থায় কোনো কল রিসিভ হবে না।</string>
+
     <string name="main_bt_status_title">ব্লুটুথ সংযোগ অবস্থা</string>
     <string name="main_bt_connected">ব্লুটুথ ডিভাইস সংযুক্ত রয়েছে</string>
     <string name="main_bt_disconnected">কোন ব্লুটুথ ডিভাইস সংযুক্ত নেই</string>
+    <string name="msg_bt_connect_required">মাস্টার সার্ভিস চালু করতে প্রথমে আপনার ব্লুটুথ হেডফোন বা নেকব্যান্ড সংযুক্ত করুন।</string>
     <string name="main_acc_status_title">অ্যাক্সেসিবিলিটি সার্ভিস অবস্থা</string>
     <string name="main_batt_status_title">ব্যাটারি অপটিমাইজেশন অবস্থা</string>
     <string name="btn_change_language">ভাষা পরিবর্তন করুন</string>
@@ -48,9 +60,32 @@
 
     <!-- Accessibility Service & Notifications -->
     <string name="accessibility_service_label">বিটি রিসিভ কল সার্ভিস</string>
-    <string name="accessibility_service_description">ব্লুটুথ হেডফোন বোতাম চাপলে হোয়াটসঅ্যাপ, মেসেঞ্জার এবং ফোনের ইনকামিং কল রিসিভ করতে সাহায্য করে। সম্পূর্ণ অফলাইন ও নিরাপদ।</string>
+    <string name="accessibility_service_description" formatted="false">ব্লুটুথ হেডফোন বোতাম চাপলে হোয়াটসঅ্যাপ, মেসেঞ্জার এবং ফোনের ইনকামিং কল রিসিভ করতে সাহায্য করে। সম্পূর্ণ অফলাইন ও নিরাপদ।</string>
     <string name="notification_channel_name">বিটি রিসিভ কল স্ট্যাটাস</string>
     <string name="notification_title">বিটি কল রিসিভার সক্রিয়</string>
     <string name="notification_desc">ব্লুটুথ বোতাম দিয়ে কল রিসিভ করার জন্য প্রস্তুত।</string>
-    <string name="call_answered_announcement">ব্লুটুথ বোতামের মাধ্যমে কল ধরুন।</string>
+
+    <!-- System Level TalkBack Accessibility Descriptions -->
+    <string name="acc_master_switch_desc">মাস্টার সার্ভিস সুইচ। ব্লুটুথ ডিভাইস কানেক্ট হলে স্বয়ংক্রিয়ভাবে অন হবে এবং ডিসকানেক্ট হলে ব্যাটারি বাঁচাতে অফ হয়ে যাবে।</string>
+    <string name="acc_locked_switch_desc">লক স্ক্রিন কল রিসিভ সুইচ। ফোন লক থাকা অবস্থায় হেডফোনের বোতাম চাপলে কল রিসিভ হবে কিনা তা নিয়ন্ত্রণ করে।</string>
+    <string name="acc_unlocked_switch_desc">আনলক অবস্থায় কল রিসিভ সুইচ। ফোন আনলক থাকা অবস্থায় হেডফোনের বোতাম চাপলে কল রিসিভ হবে কিনা তা নিয়ন্ত্রণ করে।</string>
+    <string name="acc_auto_answer_switch_desc">অটো অ্যান্সার সুইচ। অন থাকলে কল আসার পর বোতাম না চাপলেও স্বয়ংক্রিয়ভাবে কল রিসিভ হয়ে যাবে।</string>
+    <string name="acc_btn_change_language_desc">অ্যাপের ভাষা পরিবর্তন করুন। বাংলা, ইংরেজি, স্প্যানিশ, ফ্রেঞ্চ বা হিন্দি নির্বাচন করতে ডাবল ট্যাপ করুন।</string>
+    <string name="acc_btn_rerun_setup_desc">সেটআপ উইজার্ড পুনরায় চালান। ব্লুটুথ, অ্যাক্সেসিবিলিটি ও ব্যাটারি পারমিশন পুনরায় পরীক্ষা বা প্রদান করতে ডাবল ট্যাপ করুন।</string>
+    <string name="acc_btn_privacy_desc">প্রাইভেসি পলিসি ও শর্তাবলী। অফলাইন প্রাইভেসি ও জিরো-ডাটা কালেকশন পলিসি দেখতে ডাবল ট্যাপ করুন।</string>
+    <string name="call_answered_announcement">ব্লুটুথ বোতামের মাধ্যমে কল সফলভাবে রিসিভ করা হয়েছে।</string>
+
+    <!-- Detailed Privacy Policy & Terms Content -->
+    <string name="btn_close_privacy">বন্ধ করুন এবং ফিরে যান</string>
+    <string name="privacy_sec_accessibility_title">১. উদ্দেশ্য এবং টকব্যাক (TalkBack) অ্যাক্সেসিবিলিটি</string>
+    <string name="privacy_sec_accessibility_desc">বিটি রিসিভ কল অ্যাপটি মূলত অন্ধ এবং দৃষ্টিপ্রতিবন্ধী ব্যক্তিদের দৈনন্দিন সহায়তার জন্য একটি বিশেষ অ্যাক্সেসিবিলিটি টুল হিসেবে তৈরি করা হয়েছে। এর মাধ্যমে স্ক্রিন না দেখে বা না ছুঁয়েই শুধুমাত্র ব্লুটুথ হেডফোন বা নেকব্যান্ডের হার্ডওয়্যার বোতাম চেপে নিরাপদে সাধারণ ফোন, হোয়াটসঅ্যাপ, মেসেঞ্জার ও টেলিগ্রামের ইনকামিং কল রিসিভ করা যায়।</string>
+    
+    <string name="privacy_sec_data_title">২. শতভাগ ব্যক্তিগত ও শূন্য ডাটা কালেকশন (Zero Data)</string>
+    <string name="privacy_sec_data_desc">আমরা আপনার সম্পূর্ণ গোপনীয়তাকে সম্মান করি। এই অ্যাপটি ব্যবহারকারীর কোনো ব্যক্তিগত তথ্য, কন্টাক্ট লিস্ট, ভয়েস/কল রেকর্ডিং বা ব্যবহারের ডাটা সংগ্রহ, সংরক্ষণ বা কারো সাথে শেয়ার করে না।</string>
+    
+    <string name="privacy_sec_offline_title">৩. সম্পূর্ণ অফলাইন ও নিরাপদ (100% Offline)</string>
+    <string name="privacy_sec_offline_desc">অ্যাপটি সম্পূর্ণ অফলাইনে ডিভাইসের ভেতরে কাজ করে। এতে কোনো ইন্টারনেট পারমিশন নেই (android.permission.INTERNET সম্পূর্ণ অনুপস্থিত), ফলে কোনো তথ্য ডিভাইস থেকে বাইরে যাওয়া প্রযুক্তিগতভাবেই অসম্ভব।</string>
+    
+    <string name="privacy_sec_terms_title">৪. অ্যাক্সেসিবিলিটি সার্ভিসের সুনির্দিষ্ট ব্যবহার</string>
+    <string name="privacy_sec_terms_desc">অ্যান্ড্রয়েডের অ্যাক্সেসিবিলিটি সার্ভিস শুধুমাত্র ব্লুটুথ বোতাম চাপার সংকেত পেলে ইনকামিং কল স্ক্রিনে রিসিভ অ্যাকশনটি কার্যকর করার কাজে ব্যবহৃত হয়। এছাড়া অন্য কোনো স্ক্রিন স্পর্শ, টাইপিং বা ব্যাকগ্রাউন্ড নজরদারি করা হয় না।</string>
 </resources>

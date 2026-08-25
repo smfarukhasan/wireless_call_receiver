@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BT Reception Appel</string>
+    <string name="app_name">BT Réception d\'Appels</string>
 
     <!-- Language Selection Screen -->
     <string name="title_select_language">Sélectionner la Langue</string>
@@ -8,20 +8,20 @@
     <string name="btn_continue">Continuer</string>
 
     <!-- Onboarding / Setup Screen -->
-    <string name="title_onboarding">Configuration &amp; Autorisations</string>
-    <string name="subtitle_onboarding">Veuillez compléter les 3 étapes suivantes pour recevoir les appels avec le bouton Bluetooth.</string>
+    <string name="title_onboarding">Configuration et Autorisations</string>
+    <string name="subtitle_onboarding">Veuillez compléter les 3 étapes suivantes pour recevoir des appels avec votre bouton Bluetooth.</string>
     
     <string name="perm_bt_title">1. Autorisation Bluetooth</string>
     <string name="perm_bt_desc">Nécessaire pour détecter la connexion de vos écouteurs Bluetooth.</string>
     <string name="perm_bt_grant_btn">Accorder l\'autorisation Bluetooth</string>
 
     <string name="perm_acc_title">2. Service d\'Accessibilité</string>
-    <string name="perm_acc_desc">Permet de détecter les appels entrants (WhatsApp, Messenger, Téléphone) et de décrocher avec le bouton du casque.</string>
+    <string name="perm_acc_desc">Permet de détecter les appels entrants (WhatsApp, Messenger, Téléphone) et de décrocher en appuyant sur le bouton du casque.</string>
     <string name="perm_acc_grant_btn">Ouvrir les paramètres d\'accessibilité</string>
 
     <string name="perm_batt_title">3. Désactiver l\'Optimisation de la Batterie</string>
     <string name="perm_batt_desc">Empêche Android d\'arrêter le service en arrière-plan lorsque votre appareil Bluetooth est actif.</string>
-    <string name="perm_batt_grant_btn">Désactiver l\'optimisation batterie</string>
+    <string name="perm_batt_grant_btn">Désactiver l\'optimisation de batterie</string>
 
     <string name="btn_finish_setup">Terminer la configuration</string>
     <string name="status_granted">Accordé</string>
@@ -31,24 +31,59 @@
 
     <!-- Main Screen -->
     <string name="main_master_switch_title">Interrupteur Principal</string>
-    <string name="main_master_switch_on">Interrupteur ACTIVÉ : L\'application surveille les appels entrants via le bouton Bluetooth.</string>
-    <string name="main_master_switch_off">Interrupteur DÉSACTIVÉ : Les activités en arrière-plan sont arrêtées pour économiser la batterie.</string>
+    <string name="main_master_switch_on">Interrupteur ACTIVÉ : L\'application surveille les appels entrants via Bluetooth.</string>
+    <string name="main_master_switch_off">Interrupteur DÉSACTIVÉ : Activités en arrière-plan arrêtées pour économiser la batterie.</string>
     <string name="main_auto_answer_title">Réponse Automatique</string>
-    <string name="main_auto_answer_on">Réponse auto ACTIVÉE : Les appels seront décrochés automatiquement lors de la détection.</string>
-    <string name="main_auto_answer_off">Réponse auto DÉSACTIVÉE : Les appels seront décrochés UNIQUEMENT en appuyant sur le bouton Bluetooth.</string>
+    <string name="main_auto_answer_on">Réponse automatique ACTIVÉE : Les appels seront décrochés automatiquement dès détection.</string>
+    <string name="main_auto_answer_off">Réponse automatique DÉSACTIVÉE : Les appels seront décrochés UNIQUEMENT avec le bouton Bluetooth.</string>
+    
+    <string name="main_locked_screen_receive_title">Réception sur Écran Verrouillé</string>
+    <string name="main_locked_screen_receive_desc_on">Écran verrouillé ACTIVÉ : Le bouton répond aux appels lorsque l\'écran est verrouillé.</string>
+    <string name="main_locked_screen_receive_desc_off">Écran verrouillé DÉSACTIVÉ : Les appels ne seront pas répondus lorsque l\'écran est verrouillé.</string>
+    
+    <string name="main_unlocked_screen_receive_title">Réception sur Écran Déverrouillé</string>
+    <string name="main_unlocked_screen_receive_desc_on">Écran déverrouillé ACTIVÉ : Le bouton répond aux appels lorsque l\'écran est déverrouillé.</string>
+    <string name="main_unlocked_screen_receive_desc_off">Écran déverrouillé DÉSACTIVÉ : Les appels ne seront pas répondus lorsque l\'écran est déverrouillé.</string>
+
     <string name="main_bt_status_title">Connexion Bluetooth</string>
     <string name="main_bt_connected">Appareil Bluetooth connecté</string>
     <string name="main_bt_disconnected">Aucun appareil Bluetooth connecté</string>
+    <string name="msg_bt_connect_required">Veuillez d\'abord connecter vos écouteurs ou votre tour de cou Bluetooth pour activer le service principal.</string>
     <string name="main_acc_status_title">Service d\'Accessibilité</string>
-    <string name="main_batt_status_title">Exemption d\'Optimisation Batterie</string>
+    <string name="main_batt_status_title">Exemption d\'Optimisation de Batterie</string>
     <string name="btn_change_language">Changer de Langue</string>
-    <string name="btn_rerun_setup">Relancer l\'Assistant de Configuration</string>
+    <string name="btn_rerun_setup">Relancer l\'Assistant</string>
 
     <!-- Accessibility Service & Notifications -->
-    <string name="accessibility_service_label">Service BT Réception Appel</string>
-    <string name="accessibility_service_description">Surveille les appels entrants pour le téléphone, WhatsApp, Messenger et Telegram. Décroche les appels lors de l\'appui sur le bouton du casque. 100% hors ligne.</string>
+    <string name="accessibility_service_label">Service BT Réception d\'Appels</string>
+    <string name="btn_privacy_terms">Politique de confidentialité et conditions</string>
+    <string name="title_privacy_terms">Politique de confidentialité et conditions de service</string>
+    <string name="accessibility_service_description" formatted="false">Surveille les appels entrants standards, WhatsApp, Messenger et Telegram. Simule la réponse lors de l\'appui sur le bouton Bluetooth. 100% hors ligne.</string>
     <string name="notification_channel_name">Statut Réception BT</string>
-    <string name="notification_title">Récepteur d\'Appels BT Actif</string>
-    <string name="notification_desc">Prêt à répondre aux appels entrants avec le bouton Bluetooth.</string>
-    <string name="call_answered_announcement">Appel répondu via le bouton Bluetooth.</string>
+    <string name="notification_title">Récepteur d\'Appel BT Actif</string>
+    <string name="notification_desc">Prêt à recevoir les appels entrants avec le bouton Bluetooth.</string>
+    <string name="call_answered_announcement">Appel décroché avec succès via le bouton Bluetooth.</string>
+
+    <!-- System Level TalkBack Accessibility Descriptions -->
+    <string name="acc_master_switch_desc">Interrupteur Principal. S\'active automatiquement lorsqu\'un appareil Bluetooth est connecté et se désactive une fois déconnecté pour économiser la batterie.</string>
+    <string name="acc_locked_switch_desc">Interrupteur de Réception sur Écran Verrouillé. Contrôle si le bouton des écouteurs répond aux appels lorsque l\'écran est verrouillé.</string>
+    <string name="acc_unlocked_switch_desc">Interrupteur de Réception sur Écran Déverrouillé. Contrôle si le bouton des écouteurs répond aux appels lorsque l\'écran est déverrouillé.</string>
+    <string name="acc_auto_answer_switch_desc">Interrupteur de Réponse Automatique. Si activé, répond automatiquement aux appels entrants sans appuyer sur un bouton.</string>
+    <string name="acc_btn_change_language_desc">Changer la langue de l\'application. Appuyez deux fois pour sélectionner une langue.</string>
+    <string name="acc_btn_rerun_setup_desc">Relancer l\'assistant de configuration. Appuyez deux fois pour vérifier les autorisations.</string>
+    <string name="acc_btn_privacy_desc">Politique de confidentialité et conditions. Appuyez deux fois pour afficher la politique de non-collecte de données.</string>
+
+    <!-- Detailed Privacy Policy & Terms Content -->
+    <string name="btn_close_privacy">Fermer et retour</string>
+    <string name="privacy_sec_accessibility_title">1. Objectif &amp; Accessibilité TalkBack</string>
+    <string name="privacy_sec_accessibility_desc">BT Réception d\'Appels est conçu comme un outil d\'accessibilité d\'assistance pour les personnes aveugles ou malvoyantes, permettant de répondre aux appels entrants de Téléphone, WhatsApp, Messenger et Telegram avec les boutons physiques Bluetooth sans toucher l\'écran.</string>
+    
+    <string name="privacy_sec_data_title">2. Zéro Collecte de Données</string>
+    <string name="privacy_sec_data_desc">Nous respectons totalement votre vie privée. L\'application ne collecte, ne stocke ni ne partage aucune information personnelle, contacts, enregistrements vocaux ou métadonnées d\'appel.</string>
+    
+    <string name="privacy_sec_offline_title">3. 100% Hors Ligne &amp; Sécurisé</string>
+    <string name="privacy_sec_offline_desc">Cette application fonctionne entièrement hors ligne sur votre appareil sans aucune permission Internet.</string>
+    
+    <string name="privacy_sec_terms_title">4. Conformité Stricte du Service d\'Accessibilité</string>
+    <string name="privacy_sec_terms_desc">Le service d\'accessibilité est utilisé strictement et exclusivement pour effectuer le geste de réponse aux appels entrants lors de la réception d\'un appui vérifié sur le bouton Bluetooth.</string>
 </resources>

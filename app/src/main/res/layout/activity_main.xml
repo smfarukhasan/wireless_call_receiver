@@ -461,9 +461,9 @@
                             android:background="@color/divider_color"
                             android:importantForAccessibility="no" />
 
-                        <!-- Item 3: Battery Optimization Status -->
+                        <!-- Item 3: Notification Access Status -->
                         <LinearLayout
-                            android:id="@+id/layoutBattStatusItem"
+                            android:id="@+id/layoutNotificationAccessStatusItem"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
@@ -474,21 +474,64 @@
                             android:focusable="true">
 
                             <TextView
-                                android:id="@+id/tvBattStatusCardTitle"
+                                android:id="@+id/tvNotificationAccessStatusCardTitle"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/main_batt_status_title"
+                                android:text="@string/main_notification_access_status_title"
                                 android:textColor="@color/white"
                                 android:textSize="17sp"
                                 android:textStyle="bold"
                                 android:importantForAccessibility="no" />
 
                             <TextView
-                                android:id="@+id/tvBattStatusCardValue"
+                                android:id="@+id/tvNotificationAccessStatusCardValue"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="4dp"
                                 android:text="@string/status_disabled"
+                                android:textColor="@color/status_red"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:importantForAccessibility="no" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:background="@color/divider_color"
+                            android:importantForAccessibility="no" />
+
+                        <!-- Item 4: Phone Call Answering Permission -->
+                        <LinearLayout
+                            android:id="@+id/layoutPhonePermissionStatusItem"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingStart="18dp"
+                            android:paddingEnd="18dp"
+                            android:paddingTop="15dp"
+                            android:paddingBottom="15dp"
+                            android:focusable="true">
+
+                            <TextView
+                                android:id="@+id/tvPhonePermissionStatusCardTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/main_phone_permission_status_title"
+                                android:textColor="@color/white"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:importantForAccessibility="no" />
+
+                            <TextView
+                                android:id="@+id/tvPhonePermissionStatusCardValue"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="@string/status_not_granted"
                                 android:textColor="@color/status_red"
                                 android:textSize="15sp"
                                 android:textStyle="bold"
@@ -526,7 +569,7 @@
                     app:cornerRadius="14dp"
                     app:strokeColor="@color/accent_blue"
                     app:strokeWidth="1.5dp"
-                    android:contentDescription="@string/acc_btn_rerun_setup_desc" />
+                    android:contentDescription="@string/acc_btn_rerun_setup_desc_v2" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnMainPrivacyTerms"
@@ -537,7 +580,7 @@
                     android:text="@string/btn_privacy_terms"
                     android:textColor="@color/text_secondary"
                     android:textSize="15sp"
-                    android:contentDescription="@string/acc_btn_privacy_desc" />
+                    android:contentDescription="@string/acc_btn_privacy_desc_v2" />
 
             </LinearLayout>
         </ScrollView>

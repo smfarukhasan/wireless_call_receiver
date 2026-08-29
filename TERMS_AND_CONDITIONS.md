@@ -1,48 +1,61 @@
-# Terms and Conditions for BT Receive Call
+# Terms and Conditions for Wireless Call Receiver
 
-**Effective Date:** August 9, 2026  
-**Last Updated:** August 9, 2026
+**Effective date:** August 29, 2026
+**Last updated:** August 29, 2026
 
-## 1. Agreement to Terms
-By installing, opening, or using the "BT Receive Call" Android application, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use the application.
+## 1. Acceptance
 
----
+By downloading, installing, or using Wireless Call Receiver, you agree to these Terms and Conditions and the [Privacy Policy](PRIVACY_POLICY.md). If you do not agree, do not use the app.
 
-## 2. Description of Utility & Intended Use
-"BT Receive Call" is an offline accessibility tool developed to assist visually impaired and screen-reader users worldwide in answering incoming phone calls and social media calls (WhatsApp, Messenger, Telegram, etc.) using hardware buttons on connected Bluetooth headsets, neckbands, or headphones.
+## 2. Purpose and eligibility
 
-- The application is designed to enhance user convenience and safety during transit, walking, or daily activities by eliminating the need to locate and touch the phone screen during incoming calls.
-- The app requires the user to enable Android Accessibility Services and grant Bluetooth permissions for core functionality.
+Wireless Call Receiver is an Android accessibility tool designed primarily to assist blind and visually impaired users with supported incoming cellular and internet calls through configured Bluetooth hardware controls. You must be legally permitted to use the app and the connected device in your location.
 
----
+## 3. User choices and responsibilities
 
-## 3. User Responsibilities & Safety During Transit
-- **Transit & Environmental Awareness:** While BT Receive Call simplifies answering calls via Bluetooth hardware keys, users remain solely responsible for maintaining environmental awareness, road safety, and personal security while walking, commuting, or operating machinery.
-- **Device Compatibility:** Users are responsible for ensuring their Bluetooth headset/neckband hardware supports standard media key events (`KEYCODE_HEADSETHOOK`, `KEYCODE_MEDIA_PLAY_PAUSE`, `KEYCODE_CALL`).
+- You decide which permissions and special-access capabilities to grant.
+- You are responsible for reviewing Android's permission screens and the app's disclosures before granting access.
+- You must configure Auto-Answer, locked-screen, and unlocked-screen behavior according to your needs.
+- You must test the app safely before relying on it in daily use.
+- You must not use the app to interfere with another person's device, calls, accounts, or privacy.
+- Do not interact with the app or a phone in a way that violates traffic, workplace, accessibility, or safety laws.
 
----
+## 4. Device and third-party service compatibility
 
-## 4. Privacy & Data Handling
-- BT Receive Call operates 100% offline and collects no personal data, location data, audio recordings, or call contents.
-- For complete details on data handling and Accessibility API compliance, please review our [Privacy Policy](PRIVACY_POLICY.md).
+Operation depends on Android, the device manufacturer, Bluetooth hardware, calling apps, notification formats, and accessibility interfaces controlled by third parties. These may change without notice. The app is not affiliated with or endorsed by Android device manufacturers, WhatsApp, Meta, Messenger, Telegram, Viber, IMO, mobile carriers, or other third-party calling services.
 
----
+## 5. Emergency and safety limitation
 
-## 5. Intellectual Property & License
-- The BT Receive Call application, including its source code, design, interface elements, and brand assets, is the property of the developer.
-- You are granted a non-exclusive, non-transferable, personal license to use the app on compatible Android devices for personal, non-commercial purposes.
+Wireless Call Receiver is not an emergency service, medical device, safety system, or guaranteed call-handling service. Do not rely on it to receive emergency, medical, security, or other critical communications. Always maintain an alternative way to control and answer calls.
 
----
+## 6. Privacy and permissions
 
-## 6. Disclaimer of Warranties
-The application is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, express or implied. While we strive for maximum compatibility across Android devices, we do not guarantee uninterrupted operation or compatibility with every third-party calling application or custom Bluetooth hardware.
+Data access, on-device processing, retention, deletion, permissions, AccessibilityService use, and Notification Access are described in the [Privacy Policy](PRIVACY_POLICY.md). You may revoke access through Android Settings, but related features may stop working.
 
----
+## 7. License and acceptable use
 
-## 7. Limitation of Liability
-In no event shall the developer or contributors be liable for any indirect, incidental, special, consequential, or punitive damages arising out of or related to your use of or inability to use the application.
+Subject to these terms, you receive a limited, non-exclusive, non-transferable, revocable license to use the app on compatible Android devices. You may not misuse the app, bypass platform protections, distribute a misleading modified version, or use the app in violation of law or third-party rights.
 
----
+## 8. Availability and updates
 
-## 8. Governing Law & Updates
-These Terms and Conditions shall be governed by standard software licensing laws. We reserve the right to modify these terms at any time by updating this document.
+Features may be changed, suspended, or discontinued to maintain security, compatibility, or policy compliance. Updates may require renewed permissions or disclosures. You are responsible for installing appropriate updates.
+
+## 9. Disclaimer of warranties
+
+To the maximum extent permitted by applicable law, the app is provided **as is** and **as available**, without warranties of uninterrupted operation, fitness for a particular purpose, compatibility, accuracy, or non-infringement. Some jurisdictions do not allow certain warranty exclusions, so those exclusions may not fully apply to you.
+
+## 10. Limitation of liability
+
+To the maximum extent permitted by applicable law, the developer and contributors are not liable for indirect, incidental, special, consequential, or punitive damages, missed or incorrectly handled calls, device incompatibility, loss of data, or inability to use the app. Nothing in these terms excludes liability that cannot legally be excluded.
+
+## 11. Termination
+
+You may stop using the app at any time by disabling its services or uninstalling it. Your permission to use the app ends if you materially violate these terms.
+
+## 12. Governing rules and severability
+
+Applicable law governs these terms. If a provision is found unenforceable, the remaining provisions continue to apply. These terms do not limit mandatory consumer rights available in your jurisdiction.
+
+## 13. Changes and contact
+
+Material changes will be posted on the public terms page with an updated date. For support or legal questions, use the [Wireless Call Receiver support page](https://smfarukhasan.github.io/wireless_call_receiver/support.html) or [GitHub Issues](https://github.com/smfarukhasan/wireless_call_receiver/issues). Do not post sensitive personal information in public issues.

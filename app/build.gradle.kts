@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.btreceivecall"
+    namespace = "com.khubsoja.wirelesscallreceiver"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.btreceivecall"
+        applicationId = "com.khubsoja.wirelesscallreceiver"
         minSdk = 31
         targetSdk = 36
         versionCode = 1

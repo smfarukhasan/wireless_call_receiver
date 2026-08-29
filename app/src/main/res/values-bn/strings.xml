@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">বিটি রিসিভ কল</string>
+    <string name="app_name">Wireless Call Receiver</string>
     <string name="app_subtitle">স্মার্ট ব্লুটুথ কল অ্যাসিস্ট্যান্ট</string>
     <string name="dashboard_status_title">সিস্টেম স্ট্যাটাস ড্যাশবোর্ড</string>
 
@@ -51,6 +51,7 @@
     <string name="main_bt_connected">ব্লুটুথ ডিভাইস সংযুক্ত রয়েছে</string>
     <string name="main_bt_disconnected">কোন ব্লুটুথ ডিভাইস সংযুক্ত নেই</string>
     <string name="msg_bt_connect_required">মাস্টার সার্ভিস চালু করতে প্রথমে আপনার ব্লুটুথ হেডফোন বা নেকব্যান্ড সংযুক্ত করুন।</string>
+    <string name="msg_auto_answer_requires_state">অটো কল রিসিভ চালু করতে লক স্ক্রিন অথবা আনলক স্ক্রিন রিসিভের অন্তত একটি চালু করুন।</string>
     <string name="main_acc_status_title">অ্যাক্সেসিবিলিটি সার্ভিস অবস্থা</string>
     <string name="main_batt_status_title">ব্যাটারি অপটিমাইজেশন অবস্থা</string>
     <string name="btn_change_language">ভাষা পরিবর্তন করুন</string>
@@ -59,10 +60,10 @@
     <string name="title_privacy_terms">প্রাইভেসি পলিসি এবং সার্ভিস শর্তাবলী</string>
 
     <!-- Accessibility Service & Notifications -->
-    <string name="accessibility_service_label">বিটি রিসিভ কল সার্ভিস</string>
+    <string name="accessibility_service_label">Wireless Call Receiver Service</string>
     <string name="accessibility_service_description" formatted="false">ব্লুটুথ হেডফোন বোতাম চাপলে হোয়াটসঅ্যাপ, মেসেঞ্জার এবং ফোনের ইনকামিং কল রিসিভ করতে সাহায্য করে। সম্পূর্ণ অফলাইন ও নিরাপদ।</string>
-    <string name="notification_channel_name">বিটি রিসিভ কল স্ট্যাটাস</string>
-    <string name="notification_title">বিটি কল রিসিভার সক্রিয়</string>
+    <string name="notification_channel_name">Wireless Call Receiver Status</string>
+    <string name="notification_title">Wireless Call Receiver Active</string>
     <string name="notification_desc">ব্লুটুথ বোতাম দিয়ে কল রিসিভ করার জন্য প্রস্তুত।</string>
 
     <!-- System Level TalkBack Accessibility Descriptions -->
@@ -78,7 +79,7 @@
     <!-- Detailed Privacy Policy & Terms Content -->
     <string name="btn_close_privacy">বন্ধ করুন এবং ফিরে যান</string>
     <string name="privacy_sec_accessibility_title">১. উদ্দেশ্য এবং টকব্যাক (TalkBack) অ্যাক্সেসিবিলিটি</string>
-    <string name="privacy_sec_accessibility_desc">বিটি রিসিভ কল অ্যাপটি মূলত অন্ধ এবং দৃষ্টিপ্রতিবন্ধী ব্যক্তিদের দৈনন্দিন সহায়তার জন্য একটি বিশেষ অ্যাক্সেসিবিলিটি টুল হিসেবে তৈরি করা হয়েছে। এর মাধ্যমে স্ক্রিন না দেখে বা না ছুঁয়েই শুধুমাত্র ব্লুটুথ হেডফোন বা নেকব্যান্ডের হার্ডওয়্যার বোতাম চেপে নিরাপদে সাধারণ ফোন, হোয়াটসঅ্যাপ, মেসেঞ্জার ও টেলিগ্রামের ইনকামিং কল রিসিভ করা যায়।</string>
+    <string name="privacy_sec_accessibility_desc">Wireless Call Receiver is an accessibility tool designed primarily for blind and visually impaired users. It helps users answer supported calls with configured Bluetooth hardware controls.</string>
     
     <string name="privacy_sec_data_title">২. শতভাগ ব্যক্তিগত ও শূন্য ডাটা কালেকশন (Zero Data)</string>
     <string name="privacy_sec_data_desc">আমরা আপনার সম্পূর্ণ গোপনীয়তাকে সম্মান করি। এই অ্যাপটি ব্যবহারকারীর কোনো ব্যক্তিগত তথ্য, কন্টাক্ট লিস্ট, ভয়েস/কল রেকর্ডিং বা ব্যবহারের ডাটা সংগ্রহ, সংরক্ষণ বা কারো সাথে শেয়ার করে না।</string>

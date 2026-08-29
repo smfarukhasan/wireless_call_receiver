@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Reviewer guide for Wireless Call Receiver permissions and foreground service."><meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://smfarukhasan.github.io/wireless_call_receiver/review-guide.html"><link rel="icon" href="assets/wcr-logo.png" type="image/png"><link rel="stylesheet" href="styles.css"><title>Reviewer Guide — Wireless Call Receiver</title>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header"><div class="shell nav-wrap"><a class="brand" href="index.html"><img src="assets/wcr-logo.png" alt="">Wireless Call Receiver</a><nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="accessibility.html">Accessibility</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></header>
+  <main id="content"><div class="shell">
+    <header class="page-head"><p class="eyebrow">Google Play review aid</p><h1>App Reviewer Guide</h1><p class="lede">A concise walkthrough of Wireless Call Receiver's core accessibility feature, permissions, and connected-device foreground service.</p></header>
+    <article class="policy">
+      <h2>Core purpose</h2><p>The app is designed primarily for blind and visually impaired users who need a Bluetooth hardware control to answer or end supported incoming calls without locating an on-screen control.</p>
+      <h2>Review flow</h2><ol class="checklist"><li>Launch the app and select a language.</li><li>Open the Setup Wizard. Each runtime permission appears in a separate card.</li><li>Select Accessibility Service. Review the standalone disclosure, test both <strong>Not Now</strong> and <strong>Agree and Continue</strong>, then enable Wireless Call Receiver in Android Settings.</li><li>Select Notification Access. Review its separate disclosure and consent choices, then enable access if testing supported internet calls.</li><li>Connect a Bluetooth headset and enable the Master Service.</li><li>Place a supported test call. Use a configured headset control, or explicitly enable Auto-Answer to demonstrate the deterministic rule.</li><li>Turn off the Master Service or disconnect Bluetooth to verify monitoring stops.</li></ol>
+      <h2>AccessibilityService scope</h2><p>The service filters accessibility events and window roots to supported calling packages. It can read the labels and structure needed to identify a call action and can perform a targeted click or exact-bounds tap. It observes configured hardware controls while the Master Service is enabled.</p>
+      <h2>Notification Listener scope</h2><p>The listener ignores unsupported packages and does no processing while the Master Service is off. For supported call apps, it uses package, category, action label, and temporary native action-token information. Message bodies are not collected or transmitted.</p>
+      <h2>Foreground service</h2><p>The <code>connectedDevice</code> foreground service provides immediate, user-visible Bluetooth hardware monitoring while the Master Service is enabled. Its status notification identifies the active service. The task cannot be deferred during a live call-control session without breaking hardware-button responsiveness.</p>
+      <h2>Data and access</h2><p>No sign-in, account, subscription, paywall, or region restriction is present. The app has no Internet permission, ads, or analytics. See the <a href="privacy.html">Privacy Policy</a> and <a href="accessibility.html">Accessibility Statement</a>.</p>
+    </article>
+  </div></main>
+  <footer class="site-footer"><div class="shell footer-wrap"><span>© 2026 Wireless Call Receiver project maintainer.</span><nav class="footer-links" aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Accessibility statement and AccessibilityService disclosure for Wireless Call Receiver."><meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://smfarukhasan.github.io/wireless_call_receiver/accessibility.html"><link rel="icon" href="assets/wcr-logo.png" type="image/png"><link rel="stylesheet" href="styles.css"><title>Accessibility — Wireless Call Receiver</title>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header"><div class="shell nav-wrap"><a class="brand" href="index.html"><img src="assets/wcr-logo.png" alt="">Wireless Call Receiver</a><nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="accessibility.html" aria-current="page">Accessibility</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></header>
+  <main id="content"><div class="shell">
+    <header class="page-head"><p class="eyebrow">Accessibility statement</p><h1>Designed for accessible call control</h1><p class="lede">Wireless Call Receiver's primary purpose is to help blind and visually impaired users handle supported calls without locating an on-screen control.</p></header>
+    <article class="policy">
+      <h2>Who the app supports</h2><p>The interface provides labeled controls, headings, status announcements, and screen-reader-friendly descriptions. The call-control service is intended for users whose visual impairment makes incoming call interfaces difficult to locate or operate.</p>
+      <h2>AccessibilityService disclosure</h2><div class="notice"><strong>When enabled, Wireless Call Receiver can inspect supported incoming call interfaces and perform a targeted Answer or End Call action.</strong></div>
+      <p>The service can access supported incoming call notifications and visible text, content descriptions, view identifiers, and window structure in supported call interfaces. It can observe configured headset or volume-key events. When requested, it can click a matching call control or tap its exact on-screen bounds. If the user explicitly enables Auto-Answer, a deterministic answer action may run automatically after a supported incoming call is detected.</p>
+      <p>This information is processed on the device. It is not collected, sold, shared, or transmitted by the developer. The app has no Android Internet permission. Accessibility window processing is restricted to supported calling packages.</p>
+      <h2>Consent and control</h2><p>Before Android Accessibility Settings opens, the app presents a separate in-app disclosure with <strong>Agree and Continue</strong> and <strong>Not Now</strong>. Declining does not prevent access to the rest of the app, although call-control features that depend on Accessibility will remain unavailable. The service can be disabled at any time in Android Settings.</p>
+      <h2>Deterministic automation</h2><p>Actions follow user-configured rules: a supported incoming call is detected, then a configured hardware event or an explicitly enabled Auto-Answer rule invokes the narrow Answer action. The app does not use generative AI to plan or autonomously choose unrelated device actions.</p>
+      <h2>Known limitations</h2><p>Android vendors and calling apps can change their call interface, notification actions, key routing, or background behavior. Compatibility is not guaranteed for every device, headset, carrier, or calling app. Wireless Call Receiver must not be relied on for emergency communications.</p>
+      <h2>Accessibility feedback</h2><p>If a label, focus order, status announcement, contrast level, or supported call flow creates a barrier, report it through the <a href="support.html">support page</a>. Do not include call content or other sensitive information.</p>
+    </article>
+  </div></main>
+  <footer class="site-footer"><div class="shell footer-wrap"><span>© 2026 Wireless Call Receiver project maintainer.</span><nav class="footer-links" aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+</body>
+</html>

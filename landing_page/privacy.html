@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the Wireless Call Receiver Android app.">
+  <meta name="theme-color" content="#070b16">
+  <link rel="canonical" href="https://smfarukhasan.github.io/wireless_call_receiver/privacy.html">
+  <link rel="icon" href="assets/wcr-logo.png" type="image/png"><link rel="stylesheet" href="styles.css">
+  <title>Privacy Policy — Wireless Call Receiver</title>
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+  <header class="site-header"><div class="shell nav-wrap"><a class="brand" href="index.html"><img src="assets/wcr-logo.png" alt="">Wireless Call Receiver</a><nav class="nav" aria-label="Primary navigation"><a href="index.html">Home</a><a href="accessibility.html">Accessibility</a><a href="privacy.html" aria-current="page">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></header>
+  <main id="content"><div class="shell">
+    <header class="page-head"><p class="eyebrow">Public policy</p><h1>Privacy Policy</h1><p class="lede">How Wireless Call Receiver accesses and processes information on your Android device.</p><p class="meta"><strong>Effective:</strong> August 29, 2026 · <strong>Last updated:</strong> August 29, 2026</p></header>
+    <article class="policy">
+      <h2>1. Scope and contact</h2>
+      <p>This policy applies to the Wireless Call Receiver Android application. Wireless Call Receiver is an accessibility tool designed primarily to help blind and visually impaired users answer or end supported cellular and internet calls using configured Bluetooth hardware controls.</p>
+      <p>Contact the project maintainer through the <a href="support.html">support page</a> or <a href="https://github.com/smfarukhasan/wireless_call_receiver/issues">GitHub Issues</a>. Do not include sensitive personal information in a public issue.</p>
+
+      <h2>2. Information accessed on your device</h2>
+      <p>The app processes only information needed for capabilities you choose to enable:</p>
+      <ul>
+        <li><strong>Bluetooth connection information:</strong> whether a paired Bluetooth audio device is connected and its device name or alias.</li>
+        <li><strong>Call notification information:</strong> the originating package name, notification category, call-action labels, and temporary Android action tokens for supported calling apps.</li>
+        <li><strong>Supported call-interface information:</strong> visible text, content descriptions, view identifiers, and window structure used to locate an Answer or End Call control.</li>
+        <li><strong>Hardware-control events:</strong> configured headset, media, call, or volume key events used to trigger call controls.</li>
+        <li><strong>Local settings:</strong> language, master-service state, screen-state choices, and auto-answer preferences.</li>
+      </ul>
+      <p>The app does not request or access contacts, Call Log, SMS, location, microphone recordings, camera content, photos, videos, documents, advertising identifiers, or account credentials.</p>
+
+      <h2>3. How information is used</h2>
+      <p>On-device processing detects a connected headset and a supported incoming or active call, then invokes a native call action or performs a targeted accessibility click or tap. Cellular call answering can use Android Telecom when Answer Phone Calls permission is granted. Deterministic auto-answer occurs only after the user explicitly enables that setting.</p>
+      <p>Accessibility window inspection is restricted to supported phone and internet-calling packages included by the app. Notification processing is disabled while the Master Service is off.</p>
+
+      <h2>4. Collection, transmission, and sharing</h2>
+      <div class="notice"><strong>The developer does not collect, sell, rent, share, or transmit personal or sensitive user data.</strong></div>
+      <p>Wireless Call Receiver does not declare Android Internet permission and includes no advertising or analytics SDK. Call information and temporary action tokens are processed in memory and are not sent to developer-controlled servers. Diagnostic logs avoid notification action text and call-interface text.</p>
+
+      <h2>5. Permissions and sensitive APIs</h2>
+      <ul>
+        <li><strong>Nearby Bluetooth Devices:</strong> connection state and connected device name.</li>
+        <li><strong>App Notifications:</strong> the user-visible foreground monitoring notification.</li>
+        <li><strong>Answer Phone Calls:</strong> Android Telecom cellular call-answer fallback. No Call Log permission is requested.</li>
+        <li><strong>AccessibilityService:</strong> supported call notifications and interfaces, configured hardware controls, and narrow answer or end-call actions.</li>
+        <li><strong>Notification Listener:</strong> supported call-style notifications and native call actions.</li>
+        <li><strong>Connected-device foreground service:</strong> user-visible Bluetooth call-control monitoring while enabled.</li>
+      </ul>
+      <p>Each runtime permission is requested separately. Accessibility and Notification Access each have a standalone disclosure with <strong>Agree and Continue</strong> and <strong>Not Now</strong> choices before Android Settings opens. All access can be revoked in Android Settings.</p>
+
+      <h2>6. Storage, backup, retention, and deletion</h2>
+      <p>Preferences are stored in Android private app storage. Depending on device backup settings, preferences may be included in an Android system backup or device transfer; the developer does not receive or control those backups. Temporary call information is retained only while needed for the current call state.</p>
+      <p>Wireless Call Receiver creates no user account and the developer holds no user data. Delete local data through <strong>Android Settings → Apps → Wireless Call Receiver → Storage → Clear data</strong>, or uninstall the app.</p>
+
+      <h2>7. Security</h2>
+      <p>Android protects binding to the Accessibility and Notification Listener services with system permissions. The app minimizes processing to supported calling packages and keeps sensitive processing on the device. No software can be guaranteed completely error-free, but access and retention are deliberately minimized.</p>
+
+      <h2>8. Children's privacy</h2>
+      <p>The app is not specifically directed to children under 13 and does not knowingly collect children's personal data. Its primary audience is users who need accessibility call-control functionality.</p>
+
+      <h2>9. Changes</h2>
+      <p>Material changes will be posted on this public page with a revised effective or last-updated date. This policy URL is intended to remain active and publicly accessible.</p>
+
+      <h2>10. Contact</h2>
+      <p>Use the <a href="support.html">Wireless Call Receiver support page</a> or <a href="https://github.com/smfarukhasan/wireless_call_receiver/issues">GitHub Issues</a>. Do not post phone numbers, notification content, or other sensitive information in a public issue.</p>
+    </article>
+  </div></main>
+  <footer class="site-footer"><div class="shell footer-wrap"><span>© 2026 Wireless Call Receiver project maintainer.</span><nav class="footer-links" aria-label="Footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></nav></div></footer>
+</body>
+</html>

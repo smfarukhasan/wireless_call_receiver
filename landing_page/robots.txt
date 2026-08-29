@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://smfarukhasan.github.io/wireless_call_receiver/sitemap.xml

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">बीटी रिसीव कॉल</string>
+    <string name="app_name">Wireless Call Receiver</string>
+    <string name="app_subtitle">Smart Bluetooth Call Assistant</string>
+    <string name="dashboard_status_title">System Status Dashboard</string>
 
     <!-- Language Selection Screen -->
     <string name="title_select_language">भाषा चुनें</string>
@@ -49,18 +51,19 @@
     <string name="main_bt_connected">ब्लूटूथ डिवाइस कनेक्टेड है</string>
     <string name="main_bt_disconnected">कोई ब्लूटूथ डिवाइस कनेक्टेड नहीं है</string>
     <string name="msg_bt_connect_required">मास्टर सेवा सक्रिय करने के लिए कृपया पहले अपना ब्लूटूथ हेडफ़ोन या नेकबैंड कनेक्ट करें।</string>
+    <string name="msg_auto_answer_requires_state">ऑटो कॉल रिसीव चालू करने के लिए पहले लॉक स्क्रीन या अनलॉक स्क्रीन रिसीव चालू करें।</string>
     <string name="main_acc_status_title">एक्सेसिबिलिटी सर्विस स्थिति</string>
     <string name="main_batt_status_title">बैटरी ऑप्टिमाइज़ेशन स्थिति</string>
     <string name="btn_change_language">भाषा बदलें</string>
     <string name="btn_rerun_setup">सेटअप विज़ार्ड फिर से चलाएं</string>
 
     <!-- Accessibility Service & Notifications -->
-    <string name="accessibility_service_label">बीटी रिसीव कॉल सर्विस</string>
+    <string name="accessibility_service_label">Wireless Call Receiver Service</string>
     <string name="btn_privacy_terms">गोपनीयता नीति और शर्तें</string>
     <string name="title_privacy_terms">गोपनीयता नीति और सेवा की शर्तें</string>
     <string name="accessibility_service_description" formatted="false">व्हाट्सएप, मैसेंजर और फ़ोन की इनकमिंग कॉल पर नज़र रखता है। ब्लूटूथ बटन दबाने पर कॉल उठाता है। 100% ऑफ़लाइन और सुरक्षित।</string>
-    <string name="notification_channel_name">बीटी रिसीव कॉल स्थिति</string>
-    <string name="notification_title">बीटी कॉल रिसीवर सक्रिय</string>
+    <string name="notification_channel_name">Wireless Call Receiver Status</string>
+    <string name="notification_title">Wireless Call Receiver Active</string>
     <string name="notification_desc">ब्लूटूथ बटन से इनकमिंग कॉल उठाने के लिए तैयार।</string>
     <string name="call_answered_announcement">ब्लूटूथ बटन से कॉल सफलतापूर्वक उठाई गई।</string>
 
@@ -76,7 +79,7 @@
     <!-- Detailed Privacy Policy & Terms Content -->
     <string name="btn_close_privacy">बंद करें और वापस जाएं</string>
     <string name="privacy_sec_accessibility_title">1. उद्देश्य और टॉकबैक (TalkBack) एक्सेसिबिलिटी</string>
-    <string name="privacy_sec_accessibility_desc">बीटी रिसीव कॉल ऐप मुख्य रूप से दृष्टिबाधित व्यक्तियों की सहायता के लिए एक विशेष एक्सेसिबिलिटी टूल के रूप में बनाया गया है। इसके माध्यम से बिना स्क्रीन देखे या छुए केवल ब्लूटूथ हेडफ़ोन बटन दबाकर फ़ोन, व्हाट्सएप, मैसेंजर और टेलीग्राम कॉल उठाए जा सकते हैं।</string>
+    <string name="privacy_sec_accessibility_desc">Wireless Call Receiver is an accessibility tool designed primarily for blind and visually impaired users. It helps users answer supported calls with configured Bluetooth hardware controls.</string>
     
     <string name="privacy_sec_data_title">2. शून्य डेटा संग्रह (Zero Data Collection)</string>
     <string name="privacy_sec_data_desc">हम आपकी पूर्ण गोपनीयता का सम्मान करते हैं। यह ऐप उपयोगकर्ता की कोई भी व्यक्तिगत जानकारी, संपर्क सूची, वॉयस रिकॉर्डिंग या कॉल डेटा एकत्र या साझा नहीं करता है।</string>

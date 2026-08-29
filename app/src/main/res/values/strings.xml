@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BT Receive Call</string>
+    <string name="app_name">Wireless Call Receiver</string>
     <string name="app_subtitle">Smart Bluetooth Call Assistant</string>
     <string name="dashboard_status_title">System Status Dashboard</string>
 
@@ -11,25 +11,44 @@
 
     <!-- Onboarding / Setup Screen -->
     <string name="title_onboarding">App Setup &amp; Permissions</string>
-    <string name="subtitle_onboarding">Please complete the following 3 steps so the app can receive incoming calls with your Bluetooth button.</string>
+    <string name="subtitle_onboarding_v2" translatable="false">Choose the capabilities you need. Each permission is requested separately, and you can continue without optional access.</string>
     
-    <string name="perm_bt_title">1. Bluetooth Permission</string>
-    <string name="perm_bt_desc">Needed to detect when your Bluetooth headphones or neckband are connected.</string>
-    <string name="perm_bt_grant_btn">Grant Bluetooth Permission</string>
+    <string name="perm_bt_title_v2" translatable="false">1. Nearby Bluetooth Devices</string>
+    <string name="perm_bt_desc_v2" translatable="false">Allows Wireless Call Receiver to detect whether a paired Bluetooth headset is connected and display its device name. This information stays on your device.</string>
+    <string name="perm_bt_grant_btn_v2" translatable="false">Allow Bluetooth Access</string>
 
-    <string name="perm_acc_title">2. Accessibility Service</string>
-    <string name="perm_acc_desc">Allows the app to detect incoming calls on WhatsApp, Messenger, or Phone and trigger the answer button when you click your headset key.</string>
-    <string name="perm_acc_grant_btn">Open Accessibility Settings</string>
+    <string name="perm_notifications_title" translatable="false">2. App Notifications</string>
+    <string name="perm_notifications_desc" translatable="false">Allows the foreground monitoring service to show its persistent status notification. It does not grant access to notifications from other apps.</string>
+    <string name="perm_notifications_grant_btn" translatable="false">Allow App Notifications</string>
 
-    <string name="perm_batt_title">3. Disable Battery Optimization</string>
-    <string name="perm_batt_desc">Prevents Android from killing the call monitoring service when your Bluetooth device is active.</string>
-    <string name="perm_batt_grant_btn">Disable Battery Optimization</string>
+    <string name="perm_phone_title" translatable="false">3. Answer Phone Calls</string>
+    <string name="perm_phone_desc" translatable="false">Allows the app to answer an incoming cellular call after your configured Bluetooth button action or auto-answer rule. It does not read call logs or contacts.</string>
+    <string name="perm_phone_grant_btn" translatable="false">Allow Phone Call Answering</string>
+
+    <string name="perm_acc_title_v2" translatable="false">4. Accessibility Service</string>
+    <string name="perm_acc_desc_v2" translatable="false">For blind and visually impaired users, the service detects supported incoming call interfaces, observes configured hardware keys, and performs the exact answer or end-call action you request.</string>
+    <string name="perm_acc_grant_btn_v2" translatable="false">Review and Open Accessibility</string>
+
+    <string name="perm_notification_access_title" translatable="false">5. Notification Access</string>
+    <string name="perm_notification_access_desc" translatable="false">Allows local detection of call-style notifications and their answer or end actions from supported calling apps. Message content is not collected or transmitted.</string>
+    <string name="perm_notification_access_grant_btn" translatable="false">Review and Open Notification Access</string>
+
+    <string name="disclosure_accessibility_title" translatable="false">Accessibility Service Disclosure</string>
+    <string name="disclosure_accessibility_message" translatable="false">Wireless Call Receiver is an accessibility tool for blind and visually impaired users. While enabled, it can access supported incoming call notifications and the visible text, labels, view identifiers, and window structure of supported call interfaces. It can observe configured headset or volume key events and perform a targeted click or tap on an Answer or End Call control. If you enable Auto-Answer, it may perform the answer action automatically after a detected incoming call.\n\nThis processing occurs on your device. The app does not collect, sell, share, or transmit this data, and it does not contain Internet permission. You can decline now and enable the service later.</string>
+    <string name="disclosure_notification_access_title" translatable="false">Notification Access Disclosure</string>
+    <string name="disclosure_notification_access_message" translatable="false">Notification Access lets Wireless Call Receiver inspect notification package names, call categories, action labels, and temporary action tokens from supported phone and internet-calling apps so it can detect an incoming call and invoke the Answer or End Call action. It does not read or store message bodies, and no notification data is transmitted or shared. Temporary call action information is kept only in memory while needed.\n\nYou can decline now and enable this access later.</string>
+    <string name="consent_agree_continue" translatable="false">Agree and Continue</string>
+    <string name="consent_not_now" translatable="false">Not Now</string>
+    <string name="setup_optional_note" translatable="false">You may finish setup after declining any item. Features that need missing access will remain unavailable until you grant it later.</string>
 
     <string name="btn_finish_setup">Finish Setup and Go to Main App</string>
     <string name="status_granted">Granted</string>
     <string name="status_not_granted">Not Granted - Action Required</string>
     <string name="status_enabled">Enabled</string>
     <string name="status_disabled">Disabled - Action Required</string>
+    <string name="status_not_required" translatable="false">Not Required on This Android Version</string>
+    <string name="status_not_granted_v2" translatable="false">Not Granted — Related Feature Unavailable</string>
+    <string name="status_disabled_v2" translatable="false">Disabled — Related Feature Unavailable</string>
 
     <!-- Main Screen -->
     <string name="main_master_switch_title">Master Service Switch</string>
@@ -51,18 +70,20 @@
     <string name="main_bt_connected">Bluetooth Device Connected</string>
     <string name="main_bt_disconnected">No Bluetooth Device Connected</string>
     <string name="msg_bt_connect_required">Please connect your Bluetooth headphones or neckband first to activate the Master Service.</string>
+    <string name="msg_auto_answer_requires_state">Please enable either Lock Screen or Unlocked Screen call receive first.</string>
     <string name="main_acc_status_title">Accessibility Service</string>
-    <string name="main_batt_status_title">Battery Optimization Exemption</string>
+    <string name="main_notification_access_status_title" translatable="false">Notification Access</string>
+    <string name="main_phone_permission_status_title" translatable="false">Phone Call Answering Permission</string>
     <string name="btn_change_language">Change Language</string>
     <string name="btn_rerun_setup">Re-run Setup Wizard</string>
     <string name="btn_privacy_terms">Privacy Policy &amp; Terms</string>
     <string name="title_privacy_terms">Privacy Policy &amp; Terms of Service</string>
 
     <!-- Accessibility Service & Notifications -->
-    <string name="accessibility_service_label">BT Receive Call Service</string>
-    <string name="accessibility_service_description" formatted="false">Monitors incoming call screens for standard dialers, WhatsApp, Messenger, and Telegram. Simulates answer action when Bluetooth headset media button is pressed. Safe and 100% offline.</string>
-    <string name="notification_channel_name">BT Receive Call Status</string>
-    <string name="notification_title">BT Call Receiver Active</string>
+    <string name="accessibility_service_label">Wireless Call Receiver Service</string>
+    <string name="accessibility_service_description_v2" formatted="false" translatable="false">Accessibility tool for blind and visually impaired users. Detects supported incoming call interfaces and performs a targeted answer or end-call action from a configured Bluetooth button or an enabled auto-answer rule. All processing stays on the device.</string>
+    <string name="notification_channel_name">Wireless Call Receiver Status</string>
+    <string name="notification_title">Wireless Call Receiver Active</string>
     <string name="notification_desc">Ready to answer incoming calls with connected Bluetooth button.</string>
 
     <!-- System Level TalkBack Accessibility Descriptions -->
@@ -71,21 +92,51 @@
     <string name="acc_unlocked_switch_desc">Unlocked Screen Call Receive Switch. Controls whether headphone button answers calls when phone is unlocked.</string>
     <string name="acc_auto_answer_switch_desc">Auto Answer Switch. When enabled, incoming calls will be answered automatically after a short delay without pressing a button.</string>
     <string name="acc_btn_change_language_desc">Change Application Language. Double tap to select between English, Bengali, Spanish, French, or Hindi.</string>
-    <string name="acc_btn_rerun_setup_desc">Re-run Setup Wizard. Double tap to review or grant Bluetooth, Accessibility, and Battery permissions.</string>
-    <string name="acc_btn_privacy_desc">Privacy Policy and Terms. Double tap to view 100% offline privacy and zero-data-collection policy.</string>
+    <string name="acc_btn_rerun_setup_desc_v2" translatable="false">Re-run Setup Wizard. Double tap to review Bluetooth, notification, phone-call, Accessibility, and Notification Access choices.</string>
+    <string name="acc_btn_privacy_desc_v2" translatable="false">Privacy Policy and Terms. Double tap to review on-device data access, retention, sharing, and your choices.</string>
     <string name="call_answered_announcement">Call answered successfully via Bluetooth button.</string>
 
     <!-- Detailed Privacy Policy & Terms Content -->
     <string name="btn_close_privacy">Close &amp; Return</string>
-    <string name="privacy_sec_accessibility_title">1. Purpose &amp; TalkBack Accessibility</string>
-    <string name="privacy_sec_accessibility_desc">BT Receive Call is specifically designed as an assistive accessibility tool for blind and visually impaired individuals. It allows seamless, safe answering of incoming phone, WhatsApp, Messenger, and Telegram calls via Bluetooth headphone/neckband hardware buttons without needing to touch or locate on-screen buttons.</string>
+    <string name="privacy_sec_accessibility_title_v2" translatable="false">1. App and Accessibility Purpose</string>
+    <string name="privacy_sec_accessibility_desc_v2" translatable="false">Wireless Call Receiver is an accessibility tool designed primarily for blind and visually impaired users. It helps users answer or end supported cellular and internet calls with configured Bluetooth hardware controls. If the user explicitly enables Auto-Answer, the app may answer a detected incoming call after the configured delay.</string>
     
-    <string name="privacy_sec_data_title">2. Zero Data Collection</string>
-    <string name="privacy_sec_data_desc">We respect your absolute privacy. The application does NOT collect, store, transmit, or share any personal information, contact lists, audio recordings, or call metadata with anyone.</string>
+    <string name="privacy_sec_data_title_v2" translatable="false">2. Data Accessed on Your Device</string>
+    <string name="privacy_sec_data_desc_v2" translatable="false">Depending on the access you grant, the app processes Bluetooth connection state and device name; supported call-notification package names, categories, action labels, and temporary action tokens; supported call-screen text, labels, view identifiers, and window structure; and configured hardware-key events. It does not access contacts, call history, microphone audio, camera, location, message bodies, or files.</string>
     
-    <string name="privacy_sec_offline_title">3. 100% Offline &amp; Safe</string>
-    <string name="privacy_sec_offline_desc">This application operates completely offline on your device. It does not require or request Internet permissions (android.permission.INTERNET is completely absent).</string>
+    <string name="privacy_sec_offline_title_v2" translatable="false">3. Collection, Sharing, Storage, and Retention</string>
+    <string name="privacy_sec_offline_desc_v2" translatable="false">The developer does not collect, sell, share, or transmit personal or sensitive data. The app has no Internet permission, advertising SDK, or analytics SDK. Call-related information is processed locally and temporary action tokens are retained only in memory while needed. App preferences are stored locally and may be included in Android system backup or device transfer according to your device settings. Uninstalling the app removes its local app data.</string>
     
-    <string name="privacy_sec_terms_title">4. Strict Accessibility API Compliance</string>
-    <string name="privacy_sec_terms_desc">The Android Accessibility Service is utilized strictly and exclusively to trigger the incoming call accept gesture upon receiving verified Bluetooth media button hardware events. No other screen interactions, keylogging, or background monitoring are performed.</string>
+    <string name="privacy_sec_terms_title_v2" translatable="false">4. Permissions, Choices, and Terms</string>
+    <string name="privacy_sec_terms_desc_v2" translatable="false">Bluetooth access detects a connected headset. Notification permission displays the foreground-service status. Answer Phone Calls enables the Telecom call-answer fallback. Accessibility and Notification Access support call detection and targeted actions for supported apps. Each request is separate; you may decline or revoke access in Android Settings, and affected features will stop working. The app is provided as-is, may not work with every device or calling app, and must not be relied on for emergency communications. No account is created. For policy questions or support, use the project support page linked from the public website.</string>
+    <string name="privacy_sec_security_title_v2" translatable="false">5. Security and Data Deletion</string>
+    <string name="privacy_sec_security_desc_v2" translatable="false">Sensitive call information is limited to on-device processing and is not written to developer-controlled servers. Android protects the Accessibility and Notification Listener services with system binding permissions. You can delete locally stored preferences by clearing the app\'s storage or uninstalling it. Because the app creates no user account and the developer collects no user data, there is no developer-held account data to delete.</string>
+    <string name="privacy_sec_children_title_v2" translatable="false">6. Children and Policy Updates</string>
+    <string name="privacy_sec_children_desc_v2" translatable="false">The app is not specifically directed to children under 13 and does not knowingly collect children\'s data. Material policy changes will be published on the public website with an updated effective date. Continued use after an update is subject to the revised terms.</string>
+    <string name="privacy_sec_contact_title_v2" translatable="false">7. Contact and Public Policies</string>
+    <string name="privacy_sec_contact_desc_v2" translatable="false">App: Wireless Call Receiver. Developer contact mechanism: https://github.com/smfarukhasan/wireless_call_receiver/issues. Public privacy policy: https://smfarukhasan.github.io/wireless_call_receiver/privacy.html. Public terms: https://smfarukhasan.github.io/wireless_call_receiver/terms.html. Last updated: August 29, 2026.</string>
+
+    <!-- Safe default fallbacks for legacy localized keys retained for compatibility. -->
+    <string name="subtitle_onboarding">Review each permission separately and choose only the capabilities you need.</string>
+    <string name="perm_bt_title">Nearby Bluetooth Devices</string>
+    <string name="perm_bt_desc">Detects whether a paired Bluetooth headset is connected.</string>
+    <string name="perm_bt_grant_btn">Allow Bluetooth Access</string>
+    <string name="perm_acc_title">Accessibility Service</string>
+    <string name="perm_acc_desc">Supports targeted call controls for blind and visually impaired users.</string>
+    <string name="perm_acc_grant_btn">Review Accessibility Access</string>
+    <string name="perm_batt_title">Android Battery Management</string>
+    <string name="perm_batt_desc">Battery behavior is managed by Android; the app does not request direct optimization exemption.</string>
+    <string name="perm_batt_grant_btn">Open Battery Settings</string>
+    <string name="main_batt_status_title">Android Battery Management</string>
+    <string name="accessibility_service_description" formatted="false">Accessibility tool for supported call controls with on-device processing.</string>
+    <string name="acc_btn_rerun_setup_desc">Review each app permission and special-access choice.</string>
+    <string name="acc_btn_privacy_desc">Review the Privacy Policy and Terms.</string>
+    <string name="privacy_sec_accessibility_title">Accessibility Purpose</string>
+    <string name="privacy_sec_accessibility_desc">The app supports blind and visually impaired users with narrow call-control actions.</string>
+    <string name="privacy_sec_data_title">On-device Data Access</string>
+    <string name="privacy_sec_data_desc">Supported call and Bluetooth information is processed locally.</string>
+    <string name="privacy_sec_offline_title">Collection and Sharing</string>
+    <string name="privacy_sec_offline_desc">The developer does not collect or share personal data.</string>
+    <string name="privacy_sec_terms_title">Permissions and Terms</string>
+    <string name="privacy_sec_terms_desc">Permissions remain under the user\'s control in Android Settings.</string>
 </resources>

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary_dark">
 
-    <!-- Ambient Glowing Background Circles -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clipChildren="false"
         android:importantForAccessibility="no">
 
         <View
@@ -19,74 +16,57 @@
             android:layout_gravity="top|end"
             android:layout_marginTop="-50dp"
             android:layout_marginEnd="-70dp"
-            android:background="@drawable/ambient_circle_blue"
-            android:importantForAccessibility="no" />
+            android:background="@drawable/ambient_circle_blue" />
 
         <View
             android:layout_width="260dp"
             android:layout_height="260dp"
             android:layout_gravity="center_vertical|start"
             android:layout_marginStart="-80dp"
-            android:background="@drawable/ambient_circle_purple"
-            android:importantForAccessibility="no" />
-
-        <View
-            android:layout_width="260dp"
-            android:layout_height="260dp"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="-60dp"
-            android:layout_marginBottom="-50dp"
-            android:background="@drawable/ambient_circle_cyan"
-            android:importantForAccessibility="no" />
-
+            android:background="@drawable/ambient_circle_purple" />
     </FrameLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        android:scrollbars="none"
         android:paddingStart="18dp"
-        android:paddingEnd="18dp"
         android:paddingTop="16dp"
-        android:paddingBottom="24dp">
+        android:paddingEnd="18dp"
+        android:paddingBottom="24dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Title -->
             <TextView
-                android:id="@+id/tvTitleOnboarding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
+                android:accessibilityHeading="true"
+                android:gravity="center"
                 android:text="@string/title_onboarding"
                 android:textColor="@color/accent_blue_bright"
                 android:textSize="26sp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:accessibilityHeading="true" />
+                android:textStyle="bold" />
 
-            <!-- Subtitle -->
             <TextView
-                android:id="@+id/tvSubtitleOnboarding"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="6dp"
                 android:layout_marginBottom="20dp"
-                android:text="@string/subtitle_onboarding"
-                android:textColor="@color/text_secondary"
-                android:textSize="15sp"
+                android:gravity="center"
                 android:lineSpacingExtra="3dp"
-                android:gravity="center" />
+                android:text="@string/subtitle_onboarding_v2"
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
 
-            <!-- Step 1: Bluetooth Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="14dp"
                 app:cardBackgroundColor="@color/glass_card_bg"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="0dp"
@@ -100,21 +80,19 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/tvBtTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/perm_bt_title"
+                        android:accessibilityHeading="true"
+                        android:text="@string/perm_bt_title_v2"
                         android:textColor="@color/white"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:accessibilityHeading="true" />
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvBtDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/perm_bt_desc"
+                        android:text="@string/perm_bt_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp" />
 
@@ -134,20 +112,17 @@
                         android:layout_height="52dp"
                         android:layout_marginTop="12dp"
                         android:backgroundTint="@color/accent_blue"
-                        android:text="@string/perm_bt_grant_btn"
+                        android:text="@string/perm_bt_grant_btn_v2"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:cornerRadius="12dp" />
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Step 2: Accessibility Service Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="14dp"
                 app:cardBackgroundColor="@color/glass_card_bg"
                 app:cardCornerRadius="18dp"
                 app:cardElevation="0dp"
@@ -161,21 +136,131 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/tvAccTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/perm_acc_title"
+                        android:accessibilityHeading="true"
+                        android:text="@string/perm_notifications_title"
                         android:textColor="@color/white"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:accessibilityHeading="true" />
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvAccDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/perm_acc_desc"
+                        android:text="@string/perm_notifications_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/tvNotificationsStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/status_not_granted"
+                        android:textColor="@color/status_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/accent_blue"
+                        android:text="@string/perm_notifications_grant_btn"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/perm_phone_title"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perm_phone_desc"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <TextView
+                        android:id="@+id/tvPhoneStatus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/status_not_granted"
+                        android:textColor="@color/status_red"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnGrantPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="52dp"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/accent_blue"
+                        android:text="@string/perm_phone_grant_btn"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        app:cornerRadius="12dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="@color/glass_card_bg"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/glass_card_stroke"
+                app:strokeWidth="1.2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/perm_acc_title_v2"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/perm_acc_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp" />
 
@@ -195,16 +280,13 @@
                         android:layout_height="52dp"
                         android:layout_marginTop="12dp"
                         android:backgroundTint="@color/accent_blue"
-                        android:text="@string/perm_acc_grant_btn"
+                        android:text="@string/perm_acc_grant_btn_v2"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:cornerRadius="12dp" />
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Step 3: Battery Optimization Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -222,26 +304,24 @@
                     android:padding="16dp">
 
                     <TextView
-                        android:id="@+id/tvBattTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/perm_batt_title"
+                        android:accessibilityHeading="true"
+                        android:text="@string/perm_notification_access_title"
                         android:textColor="@color/white"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:accessibilityHeading="true" />
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvBattDesc"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="@string/perm_batt_desc"
+                        android:text="@string/perm_notification_access_desc"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp" />
 
                     <TextView
-                        android:id="@+id/tvBattStatus"
+                        android:id="@+id/tvNotificationAccessStatus"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -251,21 +331,27 @@
                         android:textStyle="bold" />
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/btnGrantBatt"
+                        android:id="@+id/btnGrantNotificationAccess"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:layout_marginTop="12dp"
                         android:backgroundTint="@color/accent_blue"
-                        android:text="@string/perm_batt_grant_btn"
+                        android:text="@string/perm_notification_access_grant_btn"
                         android:textColor="@color/white"
-                        android:textSize="15sp"
                         android:textStyle="bold"
                         app:cornerRadius="12dp" />
-
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Finish Setup Button -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:text="@string/setup_optional_note"
+                android:textColor="@color/text_secondary"
+                android:textSize="13.5sp" />
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnFinishSetup"
                 android:layout_width="match_parent"
@@ -278,18 +364,16 @@
                 android:textStyle="bold"
                 app:cornerRadius="14dp" />
 
-            <!-- Privacy Policy & Terms Link Button in Setup -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnOnboardingPrivacy"
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginBottom="16dp"
+                android:contentDescription="@string/acc_btn_privacy_desc_v2"
                 android:text="@string/btn_privacy_terms"
                 android:textColor="@color/text_secondary"
-                android:textSize="15sp"
-                android:contentDescription="@string/acc_btn_privacy_desc" />
-
+                android:textSize="15sp" />
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

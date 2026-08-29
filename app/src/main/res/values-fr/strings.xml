@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">BT Réception d\'Appels</string>
+    <string name="app_name">Wireless Call Receiver</string>
+    <string name="app_subtitle">Smart Bluetooth Call Assistant</string>
+    <string name="dashboard_status_title">System Status Dashboard</string>
 
     <!-- Language Selection Screen -->
     <string name="title_select_language">Sélectionner la Langue</string>
@@ -49,18 +51,19 @@
     <string name="main_bt_connected">Appareil Bluetooth connecté</string>
     <string name="main_bt_disconnected">Aucun appareil Bluetooth connecté</string>
     <string name="msg_bt_connect_required">Veuillez d\'abord connecter vos écouteurs ou votre tour de cou Bluetooth pour activer le service principal.</string>
+    <string name="msg_auto_answer_requires_state">Veuillez activer la réception sur écran verrouillé ou déverrouillé d\'abord.</string>
     <string name="main_acc_status_title">Service d\'Accessibilité</string>
     <string name="main_batt_status_title">Exemption d\'Optimisation de Batterie</string>
     <string name="btn_change_language">Changer de Langue</string>
     <string name="btn_rerun_setup">Relancer l\'Assistant</string>
 
     <!-- Accessibility Service & Notifications -->
-    <string name="accessibility_service_label">Service BT Réception d\'Appels</string>
+    <string name="accessibility_service_label">Wireless Call Receiver Service</string>
     <string name="btn_privacy_terms">Politique de confidentialité et conditions</string>
     <string name="title_privacy_terms">Politique de confidentialité et conditions de service</string>
     <string name="accessibility_service_description" formatted="false">Surveille les appels entrants standards, WhatsApp, Messenger et Telegram. Simule la réponse lors de l\'appui sur le bouton Bluetooth. 100% hors ligne.</string>
-    <string name="notification_channel_name">Statut Réception BT</string>
-    <string name="notification_title">Récepteur d\'Appel BT Actif</string>
+    <string name="notification_channel_name">Wireless Call Receiver Status</string>
+    <string name="notification_title">Wireless Call Receiver Active</string>
     <string name="notification_desc">Prêt à recevoir les appels entrants avec le bouton Bluetooth.</string>
     <string name="call_answered_announcement">Appel décroché avec succès via le bouton Bluetooth.</string>
 
@@ -76,12 +79,12 @@
     <!-- Detailed Privacy Policy & Terms Content -->
     <string name="btn_close_privacy">Fermer et retour</string>
     <string name="privacy_sec_accessibility_title">1. Objectif &amp; Accessibilité TalkBack</string>
-    <string name="privacy_sec_accessibility_desc">BT Réception d\'Appels est conçu comme un outil d\'accessibilité d\'assistance pour les personnes aveugles ou malvoyantes, permettant de répondre aux appels entrants de Téléphone, WhatsApp, Messenger et Telegram avec les boutons physiques Bluetooth sans toucher l\'écran.</string>
+    <string name="privacy_sec_accessibility_desc">Wireless Call Receiver is an accessibility tool designed primarily for blind and visually impaired users. It helps users answer supported calls with configured Bluetooth hardware controls.</string>
     
     <string name="privacy_sec_data_title">2. Zéro Collecte de Données</string>
     <string name="privacy_sec_data_desc">Nous respectons totalement votre vie privée. L\'application ne collecte, ne stocke ni ne partage aucune information personnelle, contacts, enregistrements vocaux ou métadonnées d\'appel.</string>
     
-    <string name="privacy_sec_offline_title">3. 100% Hors Ligne &amp; Sécurisé</string>
+    <string name="privacy_sec_offline_title" formatted="false">3. 100% Hors Ligne &amp; Sécurisé</string>
     <string name="privacy_sec_offline_desc">Cette application fonctionne entièrement hors ligne sur votre appareil sans aucune permission Internet.</string>
     
     <string name="privacy_sec_terms_title">4. Conformité Stricte du Service d\'Accessibilité</string>

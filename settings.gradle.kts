@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BT Receive Call"
+rootProject.name = "Wireless Call Receiver"
 include(":app")

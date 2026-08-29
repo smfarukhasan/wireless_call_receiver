@@ -84,7 +84,7 @@
                         android:id="@+id/tvSecAccessibilityTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/privacy_sec_accessibility_title"
+                        android:text="@string/privacy_sec_accessibility_title_v2"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -96,7 +96,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="14dp"
-                        android:text="@string/privacy_sec_accessibility_desc"
+                        android:text="@string/privacy_sec_accessibility_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp"
                         android:lineSpacingExtra="3dp" />
@@ -113,7 +113,7 @@
                         android:id="@+id/tvSecDataTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/privacy_sec_data_title"
+                        android:text="@string/privacy_sec_data_title_v2"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="14dp"
-                        android:text="@string/privacy_sec_data_desc"
+                        android:text="@string/privacy_sec_data_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp"
                         android:lineSpacingExtra="3dp" />
@@ -142,7 +142,7 @@
                         android:id="@+id/tvSecOfflineTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/privacy_sec_offline_title"
+                        android:text="@string/privacy_sec_offline_title_v2"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -154,7 +154,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:layout_marginBottom="14dp"
-                        android:text="@string/privacy_sec_offline_desc"
+                        android:text="@string/privacy_sec_offline_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp"
                         android:lineSpacingExtra="3dp" />
@@ -171,7 +171,7 @@
                         android:id="@+id/tvSecTermsTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/privacy_sec_terms_title"
+                        android:text="@string/privacy_sec_terms_title_v2"
                         android:textColor="@color/white"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -182,10 +182,91 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
-                        android:text="@string/privacy_sec_terms_desc"
+                        android:text="@string/privacy_sec_terms_desc_v2"
                         android:textColor="@color/text_secondary"
                         android:textSize="14.5sp"
                         android:lineSpacingExtra="3dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/privacy_sec_security_title_v2"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/privacy_sec_security_desc_v2"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/privacy_sec_children_title_v2"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/privacy_sec_children_desc_v2"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14.5sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="14dp"
+                        android:background="@color/divider_color"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:accessibilityHeading="true"
+                        android:text="@string/privacy_sec_contact_title_v2"
+                        android:textColor="@color/white"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/privacy_sec_contact_desc_v2"
+                        android:textColor="@color/text_secondary"
+                        android:textColorLink="@color/accent_blue_bright"
+                        android:textSize="14.5sp" />
 
                 </LinearLayout>
 
